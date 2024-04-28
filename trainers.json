@@ -1,0 +1,95 @@
+[
+    
+            {
+                "id":1,
+                "trainer": [
+                    {
+                        "nombre": "Pedro",
+                        "apellido": "Rodrigues",
+                        "Horario": "6-10",
+                        "ruta":"NodeJS"
+                    }
+                ]
+            },
+            {
+                "id":2,
+                "trainer": [
+                    {
+                        "nombre": "Julian",
+                        "apellido": "Gomez",
+                        "Horario": "10-2",
+                        "ruta":"NodeJS"
+                    }
+                ]
+            },
+            {
+                "id":3,
+                "trainer": [
+                    {
+                        "nombre": "Luis",
+                        "apellido": "sanchez",
+                        "Horario": "2-6",
+                        "ruta":"NodeJS"
+                    }
+                ]
+            },
+            {
+                "id":4,
+                "trainer": [
+                    {
+                        "nombre": "Nacho",
+                        "apellido": "Molina",
+                        "Horario": "7-10",
+                        "ruta":"Java"
+                    }
+                ]
+            },
+            {
+                "id":5,
+                "trainer": [
+                    {
+                        "nombre": "Jhonatan",
+                        "apellido": "Villamizar",
+                        "Horario": "10-2",
+                        "ruta":"Java"
+                    }
+                ]
+            },
+            {
+                "id":6,
+                "trainer": [
+                    {
+                        "nombre": "David",
+                        "apellido": "Gonzalo",
+                        "Horario": "2-6",
+                        "ruta":"Java"
+                    }
+                ]
+            },
+            {
+                "id":7,
+                "trainer": [
+                    {
+                        "nombre": "Jesus",
+                        "apellido": "Rincon",
+                        "Horario": "6-10",
+                        "ruta":"NetCore"
+                    }
+                ]
+            },
+            {
+                "id":8,
+                "trainer": [
+                    {
+                        "nombre": "Diego",
+                        "apellido": "Rey",
+                        "Horario": "10-2",
+                        "ruta":"NetCore"
+                    }
+                ]
+            }
+        
+
+        
+    
+]
