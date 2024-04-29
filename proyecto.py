@@ -22,3 +22,26 @@
 
 
 
+# funciones 
+# funcion para que el coordinador pueda registrar la nota de los campers que se han registrado y con ello cambiar su estado a “Aprobado”. La prueba es aprobada si el promedio entre la nota teórica y la nota practica es mayor o igual a 60.
+#funcion para mostrar la cantidad de campers que hay en estado de inscripcion
+# funcion para saber los campers que pasaron el examen de ingreso
+# funcion para que el coordinador pueda ver los datos de los trainers que trabajan en campusland
+# funcion para sacar el rendimineto de los campers esto llevaria la nota final de cada camper en el modulo en el que se encuentra
+# funcion para que el coordinador designe al trainer encargado de cada modulo 
+#funcion para que el trainer ingrese las notas de los campers
+#funcion para sacar la nota final de los campers en cada mudulo
+# funcion para guardar los datos de los campers que perdieron y aprobaron cada uno de los módulos teniendo en cuenta la ruta de entrenamiento y el entrenador encargado. debe de imprimirse el modulo en el que perdieron y con que trainers fue que perdieron
+
+
+# funcion para que La **coordinación académica** pueda crear nuevas rutas y estas rutas se añadan al Json de rutas, las cuales contienen la siguiente información (módulos):
+#- Fundamentos de programación (Introducción a la algoritmia, PSeInt y Python)
+#- Programación Web (HTML, CSS y Bootstrap).
+#- Programación formal (Java, JavaScript, C#).
+#- Bases de datos (Mysql, MongoDb y Postgresql). Cada ruta tiene un SGDB principal y un alternativo.
+#- Backend (NetCore, Spring Boot, NodeJS y Express).
+# ademas de crear nuevas rutas pueda designar los Trainers que van a estar a cargo de esas rutas
+
+
+
+

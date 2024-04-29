@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "ruta":"Java",
+        "Trainers":"Pedro,Luis,Carlos",
+        "fechaInicio":"10 de enero",
+        "fechaFin":"5 marzo"
+    },
+    {
+        "id":2,
+        "ruta":"NetCore",
+        "Trainers":"Miguel, Josue, David",
+        "fechaInicio":"10 de marzo",
+        "fechaFin":"1 abril"
+    },
+    {
+        "id":3,
+        "ruta":"NodeJS",
+        "Trainers":"Antonio,Yerson, Albert",
+        "fechaInicio":"10 de marzo",
+        "fechaFin":"25 de mayo"
+    }
+]
