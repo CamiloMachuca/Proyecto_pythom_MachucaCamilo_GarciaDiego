@@ -1,7 +1,7 @@
 {
     "salones": [
       {
-        "numero": 1,
+        "grupo": "T1",
         "estudiantes": [
           {
             "id": "001",
@@ -451,18 +451,356 @@
             "riesgo": "Bajo"
           },
           {
-            "id": "",
-            "nombres": "",
-            "apellidos": "",
-            "direccion": "",
-            "acudiente": "",
+            "id": "034",
+            "nombres": "Gabriel Andrés",
+            "apellidos": "González Martínez",
+            "direccion": "Calle 456, Ciudad Imaginaria",
+            "acudiente": "Juan González",
             "telefonos": {
-              "celular": "",
-              "fijo": ""
+              "celular": "5550123456",
+              "fijo": "5555432109"
             },
-            "estado": "",
-            "riesgo": ""
+            "estado": "Inscrito",
+            "riesgo": "Medio"
           },
+          {
+            "id": "035",
+            "nombres": "Laura Alejandra",
+            "apellidos": "Rodríguez Gómez",
+            "direccion": "Avenida 789, Ciudad Imaginaria",
+            "acudiente": "Carlos Rodríguez",
+            "telefonos": {
+              "celular": "5551234567",
+              "fijo": "5556789012"
+            },
+            "estado": "Aprobado",
+            "riesgo": "Bajo"
+          },
+          {
+            "id": "036",
+            "nombres": "Diego Alejandro",
+            "apellidos": "López García",
+            "direccion": "Calle 901, Ciudad Imaginaria",
+            "acudiente": "Laura López",
+            "telefonos": {
+              "celular": "5552345678",
+              "fijo": "5557890123"
+            },
+            "estado": "Graduado",
+            "riesgo": "Bajo"
+          },
+          {
+            "id": "037",
+            "nombres": "Valeria Alejandra",
+            "apellidos": "García Martínez",
+            "direccion": "Avenida 012, Ciudad Imaginaria",
+            "acudiente": "Carlos García",
+            "telefonos": {
+              "celular": "5553456789",
+              "fijo": "5558901234"
+            },
+            "estado": "Cursando",
+            "riesgo": "Alto"
+          },
+          {
+            "id": "038",
+            "nombres": "Mateo Sebastián",
+            "apellidos": "Martínez Gómez",
+            "direccion": "Calle 123, Ciudad Imaginaria",
+            "acudiente": "Laura Martínez",
+            "telefonos": {
+              "celular": "5554567890",
+              "fijo": "5559012345"
+            },
+            "estado": "Expulsado",
+            "riesgo": "Alto"
+          },
+          {
+            "id": "039",
+            "nombres": "Ana María",
+            "apellidos": "Rodríguez López",
+            "direccion": "Avenida 234, Ciudad Imaginaria",
+            "acudiente": "Carlos Rodríguez",
+            "telefonos": {
+              "celular": "5555678901",
+              "fijo": "5552109876"
+            },
+            "estado": "Retirado",
+            "riesgo": "Bajo"
+          },
+          {
+            "id": "040",
+            "nombres": "Juan Esteban",
+            "apellidos": "Sánchez Gómez",
+            "direccion": "Calle 345, Ciudad Imaginaria",
+            "acudiente": "Ana Sánchez",
+            "telefonos": {
+              "celular": "5556789012",
+              "fijo": "5557890123"
+            },
+            "estado": "Inscrito",
+            "riesgo": "Medio"
+          },
+          {
+            "id": "041",
+            "nombres": "Natalia Sofía",
+            "apellidos": "Ramírez Martínez",
+            "direccion": "Avenida 678, Ciudad Imaginaria",
+            "acudiente": "Diego Ramírez",
+            "telefonos": {
+              "celular": "5557890123",
+              "fijo": "5559012345"
+            },
+            "estado": "Aprobado",
+            "riesgo": "Bajo"
+          },
+          {
+            "id": "042",
+            "nombres": "Gabriel Alejandro",
+            "apellidos": "Silva García",
+            "direccion": "Calle 901, Ciudad Imaginaria",
+            "acudiente": "Ana Silva",
+            "telefonos": {
+              "celular": "5558901234",
+              "fijo": "5550123456"
+            },
+            "estado": "Graduado",
+            "riesgo": "Bajo"
+          },
+          {
+            "id": "043",
+            "nombres": "Lucía Victoria",
+            "apellidos": "Gómez López",
+            "direccion": "Avenida 234, Ciudad Imaginaria",
+            "acudiente": "Pedro Gómez",
+            "telefonos": {
+              "celular": "5559012345",
+              "fijo": "5552345678"
+            },
+            "estado": "Cursando",
+            "riesgo": "Alto"
+          },
+          {
+            "id": "044",
+            "nombres": "Mateo Alejandro",
+            "apellidos": "Fernández Martínez",
+            "direccion": "Calle 567, Ciudad Imaginaria",
+            "acudiente": "María Fernández",
+            "telefonos": {
+              "celular": "5550123456",
+              "fijo": "5556789012"
+            },
+            "estado": "Expulsado",
+            "riesgo": "Alto"
+          },
+          {
+            "id": "045",
+            "nombres": "Valentina Alejandra",
+            "apellidos": "Pérez García",
+            "direccion": "Avenida 890, Ciudad Imaginaria",
+            "acudiente": "Juan Pérez",
+            "telefonos": {
+              "celular": "5551234567",
+              "fijo": "5557890123"
+            },
+            "estado": "Inscrito",
+            "riesgo": "Medio"
+          },
+          {
+            "id": "046",
+            "nombres": "Marcos Andrés",
+            "apellidos": "Martínez López",
+            "direccion": "Calle 123, Ciudad Imaginaria",
+            "acudiente": "Laura Martínez",
+            "telefonos": {
+              "celular": "5552345678",
+              "fijo": "5559012345"
+            },
+            "estado": "Aprobado",
+            "riesgo": "Bajo"
+          },
+          {
+            "id": "047",
+            "nombres": "Elena Sofía",
+            "apellidos": "Rodríguez Gómez",
+            "direccion": "Avenida 456, Ciudad Imaginaria",
+            "acudiente": "Carlos Rodríguez",
+            "telefonos": {
+              "celular": "5553456789",
+              "fijo": "5556789012"
+            },
+            "estado": "Graduado",
+            "riesgo": "Bajo"
+          },
+          {
+            "id": "048",
+            "nombres": "Pablo Alejandro",
+            "apellidos": "Sánchez García",
+            "direccion": "Calle 789, Ciudad Imaginaria",
+            "acudiente": "Ana Sánchez",
+            "telefonos": {
+              "celular": "5554567890",
+              "fijo": "5558901234"
+            },
+            "estado": "Cursando",
+            "riesgo": "Alto"
+          },
+          {
+            "id": "049",
+            "nombres": "Julia Valentina",
+            "apellidos": "González Martínez",
+            "direccion": "Avenida 012, Ciudad Imaginaria",
+            "acudiente": "Juan González",
+            "telefonos": {
+              "celular": "5555678901",
+              "fijo": "5559012345"
+            },
+            "estado": "Expulsado",
+            "riesgo": "Alto"
+          },
+          {
+            "id": "050",
+            "nombres": "Martín Alejandro",
+            "apellidos": "Díaz López",
+            "direccion": "Calle 345, Ciudad Imaginaria",
+            "acudiente": "María Díaz",
+            "telefonos": {
+              "celular": "5556789012",
+              "fijo": "5552345678"
+            },
+            "estado": "Retirado",
+            "riesgo": "Bajo"
+          },
+          {
+            "id": "051",
+            "nombres": "Sofía Carolina",
+            "apellidos": "Martín Gómez",
+            "direccion": "Avenida 678, Ciudad Imaginaria",
+            "acudiente": "Marcos Martín",
+            "telefonos": {
+              "celular": "5557890123",
+              "fijo": "5553456789"
+            },
+            "estado": "Inscrito",
+            "riesgo": "Medio"
+          },
+          {
+            "id": "052",
+            "nombres": "Diego Alejandro",
+            "apellidos": "López Martínez",
+            "direccion": "Calle 901, Ciudad Imaginaria",
+            "acudiente": "Laura López",
+            "telefonos": {
+              "celular": "5558901234",
+              "fijo": "5554567890"
+            },
+            "estado": "Aprobado",
+            "riesgo": "Bajo"
+          },
+          {
+            "id": "053",
+            "nombres": "Valentina Alejandra",
+            "apellidos": "García López",
+            "direccion": "Avenida 234, Ciudad Imaginaria",
+            "acudiente": "Carlos García",
+            "telefonos": {
+              "celular": "5559012345",
+              "fijo": "5555678901"
+            },
+            "estado": "Graduado",
+            "riesgo": "Bajo"
+          },
+          {
+            "id": "054",
+            "nombres": "Alejandro Sebastián",
+            "apellidos": "Fernández Gómez",
+            "direccion": "Calle 567, Ciudad Imaginaria",
+            "acudiente": "María Fernández",
+            "telefonos": {
+              "celular": "5550123456",
+              "fijo": "5552345678"
+            },
+            "estado": "Cursando",
+            "riesgo": "Alto"
+          },
+          {
+            "id": "055",
+            "nombres": "Camila Alejandra",
+            "apellidos": "Ramírez Martínez",
+            "direccion": "Avenida 890, Ciudad Imaginaria",
+            "acudiente": "Diego Ramírez",
+            "telefonos": {
+              "celular": "5556789012",
+              "fijo": "5557890123"
+            },
+            "estado": "Expulsado",
+            "riesgo": "Alto"
+          },
+          {
+            "id": "056",
+            "nombres": "Mateo Alejandro",
+            "apellidos": "Martínez García",
+            "direccion": "Calle 123, Ciudad Imaginaria",
+            "acudiente": "Laura Martínez",
+            "telefonos": {
+              "celular": "5552345678",
+              "fijo": "5559012345"
+            },
+            "estado": "Inscrito",
+            "riesgo": "Medio"
+          },
+          {
+            "id": "057",
+            "nombres": "Ana Sofía",
+            "apellidos": "Rodríguez Gómez",
+            "direccion": "Avenida 456, Ciudad Imaginaria",
+            "acudiente": "Carlos Rodríguez",
+            "telefonos": {
+              "celular": "5553456789",
+              "fijo": "5556789012"
+            },
+            "estado": "Aprobado",
+            "riesgo": "Bajo"
+          },
+          {
+            "id": "058",
+            "nombres": "Pablo Alejandro",
+            "apellidos": "Sánchez López",
+            "direccion": "Calle 789, Ciudad Imaginaria",
+            "acudiente": "Ana Sánchez",
+            "telefonos": {
+              "celular": "5554567890",
+              "fijo": "5558901234"
+            },
+            "estado": "Graduado",
+            "riesgo": "Bajo"
+          },
+          {
+            "id": "059",
+            "nombres": "Julia Valentina",
+            "apellidos": "González García",
+            "direccion": "Avenida 012, Ciudad Imaginaria",
+            "acudiente": "Juan González",
+            "telefonos": {
+              "celular": "5555678901",
+              "fijo": "5559012345"
+            },
+            "estado": "Cursando",
+            "riesgo": "Alto"
+          },
+          {
+            "id": "060",
+            "nombres": "Martín Alejandro",
+            "apellidos": "Díaz Martínez",
+            "direccion": "Calle 345, Ciudad Imaginaria",
+            "acudiente": "María Díaz",
+            "telefonos": {
+              "celular": "5556789012",
+              "fijo": "5552345678"
+            },
+            "estado": "Expulsado",
+            "riesgo": "Alto"
+          }
           
         ]
       },
@@ -481,7 +819,7 @@
             },
             "estado": "",
             "riesgo": ""
-          },
+          }
           
         ]
       }
