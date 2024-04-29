@@ -87,7 +87,30 @@
                         "ruta":"NetCore"
                     }
                 ]
+            },
+            {
+                "id":9,
+                "trainer": [
+                    {
+                        "nombre": "Jose",
+                        "apellido": "Alberto",
+                        "Horario": "2-6",
+                        "ruta":"NetCore"
+                    }
+                ]
+            },
+            {
+                "id":10,
+                "trainer": [
+                    {
+                        "nombre": "Albert",
+                        "apellido": "Montolla",
+                        "Horario": "2-6",
+                        "ruta":"NetCore"
+                    }
+                ]
             }
+        
         
 
         

@@ -437,12 +437,51 @@
       {
         "grupo": "T2",
         "estudiantes": [
+          {
+            "id": "001",
+            "nombres": "Juan Camilo",
+            "apellidos": "Perez Gomes",
+            "direccion": "Calle 128, Ciudad Imaginaria",
+            "acudiente": "Marivel Perez",
+            "telefonos": {
+              "celular": "5551234568",
+              "fijo": "5559876549"
+            },
+            "estado": "Graduado",
+            "riesgo": "Bajo"
+          },
+          {
+            "id": "",
+            "nombres": "",
+            "apellidos": "",
+            "direccion": "",
+            "acudiente": "",
+            "telefonos": {
+              "celular": "",
+              "fijo": ""
+            },
+            "estado": "",
+            "riesgo": ""
+          },
           
         ]
       },
       {
         "grupo": "T3",
         "estudiantes": [
+          {
+            "id": "",
+            "nombres": "",
+            "apellidos": "",
+            "direccion": "",
+            "acudiente": "",
+            "telefonos": {
+              "celular": "",
+              "fijo": ""
+            },
+            "estado": "",
+            "riesgo": ""
+          },
           
         ]
       }
