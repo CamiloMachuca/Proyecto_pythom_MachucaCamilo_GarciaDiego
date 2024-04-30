@@ -44,6 +44,33 @@
 #- Bases de datos (Mysql, MongoDb y Postgresql). Cada ruta tiene un SGDB principal y un alternativo.
 #- Backend (NetCore, Spring Boot, NodeJS y Express).
 # ademas de crear nuevas rutas pueda designar los Trainers que van a estar a cargo de esas rutas
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+import json
+# funcion para mostrar los datos del Json
+def mostrarTrainers():
+    listaTrainer=[]
+    with open('trainers.json','r') as openfile:
+        listaTrainer= json.load(openfile)
+
+    return listaTrainer
+
+
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+import json
+# funcion para mostrar los datos del Json
+def mostrarCampers():
+    listaCampers=[]
+    with open('Campers.json','r') as openfile:
+        listaCampers= json.load(openfile)
+
+    return listaCampers
+def guardarArchivo(miData):# se crea una funcion para guardar los cambios que le realizemos al Json
+    with open("Campers.json","w") as outfile:
+        json.dump(miData,outfile)
+
+
 
 buclePrincipal=True
 while buclePrincipal==True:
@@ -61,10 +88,63 @@ while buclePrincipal==True:
 
 
     elif op=="2":
+        lisTrainer=[]
         print("============menu Trainers==============")
         print("(1)verificar informacion del trainer\n (2)volver al menu principal ")
+        opcion=input("Ingrese la opcion deseada")
+        lisTrainer= mostrarTrainers()
+        n=int(input("ingrese tu id para ver tus datos"))
+        if opcion=="1":
+            for i in lisTrainer[n]["trainer"]:
+                print("Nombre:",i["nombre"])
+                print("Apellido:",i["apellido"])
+                print("Horario:",i["Horario"])
+                print("ruta",i["ruta"])
+            
+
 
     elif op=="3":
         print("=============Menu coordinador===========")
-        print("(1)ver cantidad de campers en estado de inscripcion\n (2)ver trainers trabajando en campus \n(3) asignar notas a los campers \n(4)Asignar las rutas a los campers\n (5)asignar las aulas encargadas de cada trainers")
+        print("(1)ver cantidad de campers en estado de inscripcion\n(2)ver trainers trabajando en campus\n(3)Añadir nuevo campers \n(4) asignar notas a los campers \n(5)Asignar las rutas a los campers\n (5)asignar las aulas encargadas de cada trainers")
+        opc=input("Ingrese la opcion deseada: ")
+        if opc=="1":
+            print("Los campers en estado de inscripcion son: ")
+
+        elif opc=="2":
+            print("Los trainers que trabajan en campuslands son: ")
+            contador=0
+            lisTrainer=[]
+            lisTrainer= mostrarTrainers()
+            for i in lisTrainer[0]["trainer"]:
+                contador+=1
+                print("Nombre:",i["nombre"])
+                print("Apellido:",i["apellido"])
+                print("Horario:",i["Horario"])
+                print("ruta",i["ruta"])
+            print("La cantidad de Trainers trabajando en campuslands son:", contador)
+
+
+        elif opc=="3":
+            nuevoCamper=[]
+            nuevoCamper= mostrarCampers()
+            crearCamper={}
+            crearCamper["id"]=input("Ingrese el nuevo id del camper")
+            crearCamper["nombre"]=input("ingrese el nombre del camper: ")
+            crearCamper["apellidos"]=input("Ingrese el apellido del camper: ")
+            crearCamper["direccion"]=input("Ingresa la dirreccion del campers: ")
+            crearCamper["acudiente"]=input("ingrese el nombre del acudiente: ")
+            crearCamper["celular"]=input("Ingrese el numero del telefono celular: ")
+            crearCamper["fijo"]=input("Ingrese el numero de telefono fijo: ")
+            crearCamper["estado"]=input("ingrese el estado en el que se encuentra el camper: ")
+            crearCamper["riesgo"]=input("Ingrese el riesgo en el que se encuentra el camper: ")
+            crearCamper["ruta"]=input("Ingresa la ruta que va a seguir el campers: ")
+            
+            n=input("En que grupo desea agregar al nuevo campers se encuentran los grupos: (0)=T1, (1)=T2, (2)=T3: ")
+            nuevoCamper["campers"].append(crearCamper)# falta solucionar error para incorporar al acmper al grupo deseado por el usuario
+            guardarArchivo(nuevoCamper)
+            print("Se agrego correctamente al nuevo campers")
+
+
+
+
 
