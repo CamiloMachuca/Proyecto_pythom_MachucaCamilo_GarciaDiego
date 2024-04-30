@@ -59,7 +59,7 @@ nota1=input("Ingrese la nota de la  prueba teórica: ")
 nota2=input("Ingrese la nota de la prueba practica: ")
 nota3=input("Ingrese la nota de del primer taller")
 nota4=input("ingrese la nota del segundo taller ")
-notaFinal=(nota1*0.3)+(nota2*0.6)+(nota3*0.05)+(nota4*0.05)
+notaFinal=(nota1*0.3)+(nota2*0.6)+(nota3*0.05)+(nota4*0.05)/4
 
 
 #programa para asignar los campers a una ruta

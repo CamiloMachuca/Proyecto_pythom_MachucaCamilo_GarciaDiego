@@ -24,6 +24,9 @@
 
 # funciones 
 # funcion para que el coordinador pueda registrar la nota de los campers que se han registrado y con ello cambiar su estado a “Aprobado”. La prueba es aprobada si el promedio entre la nota teórica y la nota practica es mayor o igual a 60.
+
+
+
 #funcion para mostrar la cantidad de campers que hay en estado de inscripcion
 # funcion para saber los campers que pasaron el examen de ingreso
 # funcion para que el coordinador pueda ver los datos de los trainers que trabajan en campusland
@@ -42,6 +45,26 @@
 #- Backend (NetCore, Spring Boot, NodeJS y Express).
 # ademas de crear nuevas rutas pueda designar los Trainers que van a estar a cargo de esas rutas
 
+buclePrincipal=True
+while buclePrincipal==True:
+    print("========Menu de opciones=========")
+    print("(1) campers")
+    print("(2)Trainers")
+    print("(3)coordinador")
+    print("(4)finalizar programa")
+    op=input("que tipo de personas eres: ")
+
+    if op=="1":
+        print("=======Menu campers======")
+        print("(1)mostrar datos del campers\n (2)volver al menu principal")
 
 
+
+    elif op=="2":
+        print("============menu Trainers==============")
+        print("(1)verificar informacion del trainer\n (2)volver al menu principal ")
+
+    elif op=="3":
+        print("=============Menu coordinador===========")
+        print("(1)ver cantidad de campers en estado de inscripcion\n (2)ver trainers trabajando en campus \n(3) asignar notas a los campers \n(4)Asignar las rutas a los campers\n (5)asignar las aulas encargadas de cada trainers")
 
