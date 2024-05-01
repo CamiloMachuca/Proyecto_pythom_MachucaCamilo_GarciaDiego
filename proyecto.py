@@ -82,8 +82,26 @@ while buclePrincipal==True:
     op=input("que tipo de personas eres: ")
 
     if op=="1":
-        print("=======Menu campers======")
-        print("(1)mostrar datos del campers\n (2)volver al menu principal")
+        buli=True
+        while buli==True:
+            print("=======Menu campers======")
+            print("(1)mostrar datos del campers\n(2)volver al menu principal")
+            opcion=input("Ingrese la opcion deseada")
+                
+            if opcion=="1":
+               
+                lisCampers= mostrarCampers()# programa para mostrar campersss
+                print(lisCampers)
+                for i in lisCampers[0]["campers"]:
+                    print("Nombre:",i["nombre"])
+                    print("Apellido:",i["apellido"])
+                    print("Horario:",i["Horario"])
+                    print("ruta",i["ruta"])
+            if opcion=="2":
+                print("Se volvio al menu principal")
+                buli=False
+            else:
+                print("Porfavor ingrese una opcion valida")
 
 
 
