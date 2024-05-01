@@ -6,8 +6,9 @@
                     {
                         "nombre": "Pedro",
                         "apellido": "Rodrigues",
-                        "Horario": "6-10",
-                        "ruta":"NodeJS"
+                        "Horario": "6A.M-10A.M",
+                        "ruta":"No asignada",
+                        "salon":"no asignado"
                     }
                 ]
             },
@@ -17,8 +18,9 @@
                     {
                         "nombre": "Julian",
                         "apellido": "Gomez",
-                        "Horario": "10-2",
-                        "ruta":"NodeJS"
+                        "Horario": "10A.M - 2P.M",
+                        "ruta":"No asignada",
+                        "salon":"no asignado"
                     }
                 ]
             },
@@ -28,8 +30,9 @@
                     {
                         "nombre": "Luis",
                         "apellido": "sanchez",
-                        "Horario": "2-6",
-                        "ruta":"NodeJS"
+                        "Horario": "2P.M-6P.M",
+                        "ruta":"No asignada",
+                        "salon":"no asignado"
                     }
                 ]
             },
@@ -39,8 +42,9 @@
                     {
                         "nombre": "Nacho",
                         "apellido": "Molina",
-                        "Horario": "7-10",
-                        "ruta":"Java"
+                        "Horario": "6P.M - 10P.M",
+                        "ruta":"No asignada",
+                        "salon":"no asignado"
                     }
                 ]
             },
@@ -50,8 +54,9 @@
                     {
                         "nombre": "Jhonatan",
                         "apellido": "Villamizar",
-                        "Horario": "10-2",
-                        "ruta":"Java"
+                        "Horario": "6A.M - 10A.M",
+                        "ruta":"No asignada",
+                        "salon":"no asignado"
                     }
                 ]
             },
@@ -61,8 +66,9 @@
                     {
                         "nombre": "David",
                         "apellido": "Gonzalo",
-                        "Horario": "2-6",
-                        "ruta":"Java"
+                        "Horario": "10A.M - 2P.M",
+                        "ruta":"No asignada",
+                        "salon":"no asignado"
                     }
                 ]
             },
@@ -72,8 +78,9 @@
                     {
                         "nombre": "Jesus",
                         "apellido": "Rincon",
-                        "Horario": "6-10",
-                        "ruta":"NetCore"
+                        "Horario": "2P.M - 6P.M",
+                        "ruta":"No asignada",
+                        "salon":"no asignado"
                     }
                 ]
             },
@@ -83,8 +90,9 @@
                     {
                         "nombre": "Diego",
                         "apellido": "Rey",
-                        "Horario": "10-2",
-                        "ruta":"NetCore"
+                        "Horario": "6P.M - 10P.M",
+                        "ruta":"No asignada",
+                        "salon":"no asignado"
                     }
                 ]
             },
@@ -94,8 +102,9 @@
                     {
                         "nombre": "Jose",
                         "apellido": "Alberto",
-                        "Horario": "2-6",
-                        "ruta":"NetCore"
+                        "Horario": "6A.M - 10A.M",
+                        "ruta":"No asignada",
+                        "salon":"no asignado"
                     }
                 ]
             },
@@ -105,8 +114,9 @@
                     {
                         "nombre": "Albert",
                         "apellido": "Montolla",
-                        "Horario": "2-6",
-                        "ruta":"NetCore"
+                        "Horario": "10A.M - 2P.M",
+                        "ruta":"No asignada",
+                        "salon":"no asignado"
                     }
                 ]
             }
