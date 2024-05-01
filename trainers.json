@@ -1,128 +1,122 @@
 [
-    
+    {
+        "id": 1,
+        "trainer": [
             {
-                "id":1,
-                "trainer": [
-                    {
-                        "nombre": "Pedro",
-                        "apellido": "Rodrigues",
-                        "Horario": "6A.M-10A.M",
-                        "ruta":"No asignada",
-                        "salon":"no asignado"
-                    }
-                ]
-            },
-            {
-                "id":2,
-                "trainer": [
-                    {
-                        "nombre": "Julian",
-                        "apellido": "Gomez",
-                        "Horario": "10A.M - 2P.M",
-                        "ruta":"No asignada",
-                        "salon":"no asignado"
-                    }
-                ]
-            },
-            {
-                "id":3,
-                "trainer": [
-                    {
-                        "nombre": "Luis",
-                        "apellido": "sanchez",
-                        "Horario": "2P.M-6P.M",
-                        "ruta":"No asignada",
-                        "salon":"no asignado"
-                    }
-                ]
-            },
-            {
-                "id":4,
-                "trainer": [
-                    {
-                        "nombre": "Nacho",
-                        "apellido": "Molina",
-                        "Horario": "6P.M - 10P.M",
-                        "ruta":"No asignada",
-                        "salon":"no asignado"
-                    }
-                ]
-            },
-            {
-                "id":5,
-                "trainer": [
-                    {
-                        "nombre": "Jhonatan",
-                        "apellido": "Villamizar",
-                        "Horario": "6A.M - 10A.M",
-                        "ruta":"No asignada",
-                        "salon":"no asignado"
-                    }
-                ]
-            },
-            {
-                "id":6,
-                "trainer": [
-                    {
-                        "nombre": "David",
-                        "apellido": "Gonzalo",
-                        "Horario": "10A.M - 2P.M",
-                        "ruta":"No asignada",
-                        "salon":"no asignado"
-                    }
-                ]
-            },
-            {
-                "id":7,
-                "trainer": [
-                    {
-                        "nombre": "Jesus",
-                        "apellido": "Rincon",
-                        "Horario": "2P.M - 6P.M",
-                        "ruta":"No asignada",
-                        "salon":"no asignado"
-                    }
-                ]
-            },
-            {
-                "id":8,
-                "trainer": [
-                    {
-                        "nombre": "Diego",
-                        "apellido": "Rey",
-                        "Horario": "6P.M - 10P.M",
-                        "ruta":"No asignada",
-                        "salon":"no asignado"
-                    }
-                ]
-            },
-            {
-                "id":9,
-                "trainer": [
-                    {
-                        "nombre": "Jose",
-                        "apellido": "Alberto",
-                        "Horario": "6A.M - 10A.M",
-                        "ruta":"No asignada",
-                        "salon":"no asignado"
-                    }
-                ]
-            },
-            {
-                "id":10,
-                "trainer": [
-                    {
-                        "nombre": "Albert",
-                        "apellido": "Montolla",
-                        "Horario": "10A.M - 2P.M",
-                        "ruta":"No asignada",
-                        "salon":"no asignado"
-                    }
-                ]
+                "nombre": "Pedro",
+                "apellido": "Rodrigues",
+                "Horario": "6A.M-10A.M",
+                "ruta": "No asignada",
+                "salon": "no asignado"
             }
-        
-        
-
-        
-    
+        ]
+    },
+    {
+        "id": 2,
+        "trainer": [
+            {
+                "nombre": "Julian",
+                "apellido": "Gomez",
+                "Horario": "10A.M - 2P.M",
+                "ruta": "No asignada",
+                "salon": "no asignado"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "trainer": [
+            {
+                "nombre": "Luis",
+                "apellido": "sanchez",
+                "Horario": "2P.M-6P.M",
+                "ruta": "No asignada",
+                "salon": "no asignado"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "trainer": [
+            {
+                "nombre": "Nacho",
+                "apellido": "Molina",
+                "Horario": "6P.M - 10P.M",
+                "ruta": "No asignada",
+                "salon": "no asignado"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "trainer": [
+            {
+                "nombre": "Jhonatan",
+                "apellido": "Villamizar",
+                "Horario": "6A.M - 10A.M",
+                "ruta": "No asignada",
+                "salon": "no asignado"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "trainer": [
+            {
+                "nombre": "David",
+                "apellido": "Gonzalo",
+                "Horario": "10A.M - 2P.M",
+                "ruta": "No asignada",
+                "salon": "no asignado"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "trainer": [
+            {
+                "nombre": "Jesus",
+                "apellido": "Rincon",
+                "Horario": "2P.M - 6P.M",
+                "ruta": "No asignada",
+                "salon": "no asignado"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "trainer": [
+            {
+                "nombre": "Diego",
+                "apellido": "Rey",
+                "Horario": "6P.M - 10P.M",
+                "ruta": "No asignada",
+                "salon": "no asignado"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "trainer": [
+            {
+                "nombre": "Jose",
+                "apellido": "Alberto",
+                "Horario": "6A.M - 10A.M",
+                "ruta": "No asignada",
+                "salon": "no asignado"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "trainer": [
+            {
+                "nombre": "Albert",
+                "apellido": "Montolla",
+                "Horario": "10A.M - 2P.M",
+                "ruta": "No asignada",
+                "salon": "no asignado"
+            }
+        ]
+    }
 ]

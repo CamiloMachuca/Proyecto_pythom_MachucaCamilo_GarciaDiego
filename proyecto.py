@@ -50,6 +50,9 @@ def mostrarTrainers():
         listaTrainer= json.load(openfile)
 
     return listaTrainer
+def guardarArchivoTrainers(miDato):# se crea una funcion para guardar los cambios que le realizemos al Json
+    with open("trainers.json","w") as outfile:
+        json.dump(miDato,outfile)
 
 
 
@@ -65,7 +68,7 @@ def mostrarCampers():
         listaCampers= json.load(openfile)
 
     return listaCampers
-def guardarArchivo(miData):# se crea una funcion para guardar los cambios que le realizemos al Json
+def guardarArchivoCampers(miData):# se crea una funcion para guardar los cambios que le realizemos al Json
     with open("Campers.json","w") as outfile:
         json.dump(miData,outfile)
 
@@ -159,7 +162,7 @@ while buclePrincipal==True:
         print("##########################################")
         print("============= Menu coordinador ===========")
         print("##########################################")
-        print("(1)ver cantidad de campers en estado de inscripcion\n(2)ver trainers trabajando en campus\n(3)Añadir nuevo campers \n(4) asignar notas a los campers \n(5)Asignar las rutas de entrenamiento a los campers\n (6)Crear nuevas rutas de entrenamiento\n(7)asignar los trainers encargados de cada ruta")
+        print("(1)ver cantidad de campers en estado de inscripcion\n(2)ver trainers trabajando en campus\n(3)Añadir nuevo campers \n(4)asignar notas a los campers \n(5)Asignar las rutas de entrenamiento a los campers\n(6)Crear nuevas rutas de entrenamiento\n(7)asignar los trainers encargados de cada ruta")
         opc=input("Ingrese la opcion deseada: ")
 
         if opc=="1":#opcion para mostrar los campers que se inscribieron 
@@ -167,14 +170,19 @@ while buclePrincipal==True:
             datosCampers=[]
             datosCampers= mostrarCampers()
             campersInscritos=[]# se crea una lista para separar a los campers que pasaron la inscipcion
-            campersReprobados=[]#se crea una lista para separar a los campers que reprobaron
-            print(datosCampers)
-            for camper in datosCampers["campers"]:# falta solucionar error para seleccionar los campers que en el estada aparesca: aprobado
-                if camper["estado"] == "Inscrito":
-                    campersInscritos.append(camper)
-                else:
-                    campersReprobados.append(camper)
-            print(campersInscritos)
+            #se crea una lista para separar a los campers que reprobaron
+            for grupo in datosCampers["grupo"]:
+                    for campe in grupo["campers"]:
+                        if  "estado" in campe["camper"] and campe["camper"]["estado"]=="Inscrito":
+
+                            campersInscritos.append(campe["camper"])
+                            for camper in campersInscritos:
+                                print(camper)
+            
+            #for camper in datosCampers:# falta solucionar error para seleccionar los campers que en el estada aparesca: aprobado
+               # if camper['estado']== "Inscrito":
+                   # campersInscritos.append(camper)
+                   # print(campersInscritos)               
             
 
 
@@ -209,7 +217,7 @@ while buclePrincipal==True:
             
             n=int(input("En que grupo desea agregar al nuevo campers se encuentran los grupos: (0)=T1, (1)=T2, (2)=T3: "))
             nuevoCamper[n]["campers"].append(crearCamper)# falta solucionar error para incorporar al acmper al grupo deseado por el usuario
-            guardarArchivo(nuevoCamper)
+            guardarArchivoCampers(nuevoCamper)
             print("Se agrego correctamente al nuevo campers")
 
 
@@ -239,6 +247,7 @@ while buclePrincipal==True:
             Añadir_ruta=input("ingrese la opcion de la ruta a la cual le vas a añadir mas modulos: ")
             if Añadir_ruta=="1":
                 print("ruta NodeJS")#falta programa para añadir los modulos a la ruta NodeJS
+                print()
 
 
             elif Añadir_ruta=="2":
@@ -255,26 +264,22 @@ while buclePrincipal==True:
         elif opc=="7":#opcion para asignar los trainers a cada ruta
             
             lisTrainer=[]
-            print("Asigne los Trainers que van a estar encargados de cada ruta")
-            n=int(input("ingrese el id del trainer al cual le vas a asignar la ruta "))
-            
             lisTrainer= mostrarTrainers()
-            for i in lisTrainer[n]["trainer"]:# se muestra el trainer seleccionado por el coordinador
-                print("Nombre:",i["nombre"])
-                print("Apellido:",i["apellido"])
-                print("Horario:",i["Horario"])
-                print("ruta",i["ruta"])
-            lissRutas=[]
-            lissRutas= mostrarRutas()# se pasan los datos del json rutas a la lista lissRutas
-            print(lissRutas)# se muestra los datos que hay en el json de rutas
-            print("Que ruta le vas a asignar al trainer") # falta terminar el programa para que el coordinador seleccione la ruta que le quiere añadir al trainer
-            
-            
-            
-            
-            
+            print("Asigne los Trainers que van a estar encargados de cada ruta")
+            print()
+            #n=int(input("ingrese el id del trainer al cual le vas a asignar la ruta "))
             bucleTrainer=True
             while bucleTrainer==True:# se crea un bucle para ver si el coordinador quiere seguir asignando rutas a los trainers
+                nombre=input("Ingrese el nombre del trainer al cual le vas a asignar la ruta: ")
+                ruta=input("Ingrese la ruta que le va a asignar al trainer: ")
+                for dato in lisTrainer:
+                    for trainers in dato["trainer"]:
+                        if  trainers["nombre"]==nombre:
+                            trainers["ruta"]= ruta
+                            guardarArchivoTrainers(lisTrainer)
+                            print("Ruta asignada correctamente")
+                            print()
+            
                 print("desea terminar de asignar las rutas (si) o (no)")
                 res=input()
                 if res=="si":
@@ -285,7 +290,8 @@ while buclePrincipal==True:
                 else:
                     print("Porfavor ingrese una opcion valida ")
 
-
+# falta hacer los calculos de los horarios para designar cuantos Trainers son necesarios para las rutas 
+#falta designar el inicio y el final de cada ruta osea cuando inicia el programa de esa ruta y cuando finaliza ese programa
 
 
 
