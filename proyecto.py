@@ -170,14 +170,17 @@ while buclePrincipal==True:
             datosCampers=[]
             datosCampers= mostrarCampers()
             campersInscritos=[]# se crea una lista para separar a los campers que pasaron la inscipcion
-            #se crea una lista para separar a los campers que reprobaron
-            for grupo in datosCampers["grupo"]:
+            
+            for grupo in datosCampers["grupos"]:
                     for campe in grupo["campers"]:
                         if  "estado" in campe["camper"] and campe["camper"]["estado"]=="Inscrito":
 
-                            campersInscritos.append(campe["camper"])
-                            for camper in campersInscritos:
-                                print(camper)
+                            campersInscritos.append(campe["camper"]["nombres"])# falta solucionar porque se estan repitiendo los nombres de unos campers
+                            cantidadCampers= len(campersInscritos)
+                            for nombre in campersInscritos:
+                                print(nombre)
+                                print()
+            print("La cantidad de campers inscritos son: ",cantidadCampers)
             
             #for camper in datosCampers:# falta solucionar error para seleccionar los campers que en el estada aparesca: aprobado
                # if camper['estado']== "Inscrito":
@@ -209,14 +212,13 @@ while buclePrincipal==True:
             crearCamper["apellidos"]=input("Ingrese el apellido del camper: ")
             crearCamper["direccion"]=input("Ingresa la dirreccion del campers: ")
             crearCamper["acudiente"]=input("ingrese el nombre del acudiente: ")
-            crearCamper["celular"]=input("Ingrese el numero del telefono celular: ")
-            crearCamper["fijo"]=input("Ingrese el numero de telefono fijo: ")
+            crearCamper["telefonos"]={"celular": input("Ingrese el numero del telefono celular: "),"fijo":input("Ingrese el numero del telefono fijo: ")}
             crearCamper["estado"]=input("ingrese el estado en el que se encuentra el camper: ")
             crearCamper["riesgo"]=input("Ingrese el riesgo en el que se encuentra el camper: ")
             crearCamper["ruta"]=input("Ingresa la ruta que va a seguir el campers: ")
             
             n=int(input("En que grupo desea agregar al nuevo campers se encuentran los grupos: (0)=T1, (1)=T2, (2)=T3: "))
-            nuevoCamper[n]["campers"].append(crearCamper)# falta solucionar error para incorporar al acmper al grupo deseado por el usuario
+            nuevoCamper["grupos"][n]["campers"].append({"camper":crearCamper})# falta solucionar error para incorporar al camper al grupo deseado por el usuario error resuelto falta probar todos los grupos
             guardarArchivoCampers(nuevoCamper)
             print("Se agrego correctamente al nuevo campers")
 
