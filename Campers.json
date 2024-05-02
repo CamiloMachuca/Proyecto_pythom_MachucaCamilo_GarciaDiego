@@ -17,8 +17,7 @@
             "estado": "No asignado",
             "riesgo": "No asignado",
             "ruta": "No asignado"
-          }
-        },
+          },
         {
           "camper": {
             "id": "2",
@@ -198,7 +197,7 @@
         {
           "camper": {
             "id": "9",
-            "nombre": "camilo",
+            "nombres": "camilo",
             "apellidos": "vega",
             "direccion": "vtyvivt",
             "acudiente": "marta",

@@ -72,6 +72,10 @@ def guardarArchivoCampers(miData):# se crea una funcion para guardar los cambios
     with open("Campers.json","w") as outfile:
         json.dump(miData,outfile)
 
+def guardarArchivoRutas(miDato1):# se crea una funcion para guardar los cambios que le realizemos al Json
+    with open("rutas.json","w") as outfile:
+        json.dump(miDato1,outfile)
+
 
 
 
@@ -92,6 +96,7 @@ def mostrarRutas():
 
 
 
+
 buclePrincipal=True
 while buclePrincipal==True:
     print("##########################################")
@@ -101,7 +106,7 @@ while buclePrincipal==True:
     print("(2)Trainers")# opcion realizada
     print("(3)coordinador")
     print("(4)finalizar programa")
-    op=input("que tipo de personas eres: ")
+    op=input("que opcion eliges: ")
 
     if op=="1":
         buli=True
@@ -137,7 +142,7 @@ while buclePrincipal==True:
             print("##########################################")
             print("============= menu Trainers ==============")
             print("##########################################")
-            print("(1)verificar informacion del trainer\n (2)volver al menu principal ")
+            print("(1)verificar informacion del trainer\n(2)Reportes\n(3)volver al menu principal ")
             opcion=input("Ingrese la opcion deseada")
             
             
@@ -151,6 +156,11 @@ while buclePrincipal==True:
                     print("ruta",i["ruta"])
                     print("salon",i["salon"])
             elif opcion=="2":
+                print("opcion de reportes")
+
+
+
+            elif opcion=="3":
                 print("Se volvio al menu principal")
                 variable=False
             else:
@@ -162,7 +172,7 @@ while buclePrincipal==True:
         print("##########################################")
         print("============= Menu coordinador ===========")
         print("##########################################")
-        print("(1)ver cantidad de campers en estado de inscripcion\n(2)ver trainers trabajando en campus\n(3)Añadir nuevo campers \n(4)asignar notas a los campers \n(5)Asignar las rutas de entrenamiento a los campers\n(6)Crear nuevas rutas de entrenamiento\n(7)asignar los trainers encargados de cada ruta")
+        print("(1)ver cantidad de campers en estado de inscripcion\n(2)ver trainers trabajando en campus\n(3)Añadir nuevo campers \n(4)asignar notas a los campers \n(5)Asignar las rutas de entrenamiento a los campers\n(6)Crear nuevas rutas de entrenamiento\n(7)asignar los trainers encargados de cada ruta\n(8)reportes")
         opc=input("Ingrese la opcion deseada: ")
 
         if opc=="1":#opcion para mostrar los campers que se inscribieron 
@@ -171,14 +181,19 @@ while buclePrincipal==True:
             datosCampers= mostrarCampers()
             campersInscritos=[]# se crea una lista para separar a los campers que pasaron la inscipcion
             
-            for grupo in datosCampers["grupos"]:
+            for grupo in datosCampers["grupos"][0]:
                     for campe in grupo["campers"]:
                         if  "estado" in campe["camper"] and campe["camper"]["estado"]=="Inscrito":
 
-                            campersInscritos.append(campe["camper"]["nombres"])# falta solucionar porque se estan repitiendo los nombres de unos campers
+                            campersInscritos.append(campe["camper"])# falta solucionar porque se estan repitiendo los nombres de unos campers
                             cantidadCampers= len(campersInscritos)
-                            for nombre in campersInscritos:
-                                print(nombre)
+                            for i in campersInscritos:
+                                print("ID:",i["id"])
+                                print("Nombre:",i["nombres"])
+                                print("Apellido:",i["apellidos"])
+                                print("direccion:",i["direccion"])
+                                print("acudiente",i["acudiente"])
+                                print("acudiente",i["acudiente"])
                                 print()
             print("La cantidad de campers inscritos son: ",cantidadCampers)
             
@@ -208,7 +223,7 @@ while buclePrincipal==True:
             nuevoCamper= mostrarCampers()
             crearCamper={}
             crearCamper["id"]=input("Ingrese el nuevo id del camper")
-            crearCamper["nombre"]=input("ingrese el nombre del camper: ")
+            crearCamper["nombres"]=input("ingrese el nombre del camper: ")
             crearCamper["apellidos"]=input("Ingrese el apellido del camper: ")
             crearCamper["direccion"]=input("Ingresa la dirreccion del campers: ")
             crearCamper["acudiente"]=input("ingrese el nombre del acudiente: ")
@@ -271,26 +286,38 @@ while buclePrincipal==True:
             print()
             #n=int(input("ingrese el id del trainer al cual le vas a asignar la ruta "))
             bucleTrainer=True
-            while bucleTrainer==True:# se crea un bucle para ver si el coordinador quiere seguir asignando rutas a los trainers
-                nombre=input("Ingrese el nombre del trainer al cual le vas a asignar la ruta: ")
-                ruta=input("Ingrese la ruta que le va a asignar al trainer: ")
-                for dato in lisTrainer:
-                    for trainers in dato["trainer"]:
-                        if  trainers["nombre"]==nombre:
-                            trainers["ruta"]= ruta
-                            guardarArchivoTrainers(lisTrainer)
-                            print("Ruta asignada correctamente")
-                            print()
+            bu=True
             
-                print("desea terminar de asignar las rutas (si) o (no)")
-                res=input()
-                if res=="si":
-                    print("se finalizo la asignacion de las rutas a los Trainers")
-                    bucleTrainer=False
-                elif res=="no":
-                    print("continue asignandole las rutas a los trainers ")
-                else:
-                    print("Porfavor ingrese una opcion valida ")
+            while bucleTrainer==True:# se crea un bucle para ver si el coordinador quiere seguir asignando rutas a los trainers
+                bucl=True
+                while bucl==True:
+                    id=int(input("Ingrese el nombre del trainer al cual le vas a asignar la ruta: "))
+                    
+                    for dato in lisTrainer:
+                        for trainers in dato["trainer"]:
+                            if  trainers["id"]==id:
+                                ruta=input("Ingrese la ruta que le va a asignar al trainer: ")
+                                trainers["ruta"]= ruta
+                                guardarArchivoTrainers(lisTrainer)
+                                print("Ruta asignada correctamente")
+                                print()
+                                bu=True
+                                bucl=False
+
+
+                    while bu==True:
+                        print("desea terminar de asignar las rutas (si) o (no)")
+                        res=input()
+                        if res=="si":
+                            print("se finalizo la asignacion de las rutas a los Trainers")
+                            bucleTrainer=False
+                            bu=False
+                            bucl=False
+                        elif res=="no":
+                            bu=False
+                            print("continue asignandole las rutas a los trainers ")
+                        else:
+                            print("Porfavor ingrese una opcion valida ")
 
 # falta hacer los calculos de los horarios para designar cuantos Trainers son necesarios para las rutas 
 #falta designar el inicio y el final de cada ruta osea cuando inicia el programa de esa ruta y cuando finaliza ese programa
