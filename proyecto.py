@@ -183,7 +183,7 @@ while buclePrincipal==True:
         print("##########################################")
         print("============= Menu coordinador ===========")
         print("##########################################")
-        print("(1)Añadir nuevo campers\n(2)asignar notas a los campers\n(3)Asignar las rutas de entrenamiento a los campers\n(4)Crear nuevas rutas de entrenamiento\n(5)asignar los trainers encargados de cada ruta\n(6)realizar reportes")
+        print("(1)Añadir nuevo campers\n(2)asignar notas a los campers\n(3)Asignar las rutas de entrenamiento a los campers\n(4)asignar nuevos modulos \n(5)asignar los trainers encargados de cada ruta\n(6)realizar reportes")
         opc=input("Ingrese la opcion deseada: ")
 
         if opc=="1":#opcion para añadir un nuevo campers
@@ -191,7 +191,7 @@ while buclePrincipal==True:
             print("Ingrese los datos para el nuevo camper")
             nuevoCamper= mostrarCampers()
             crearCamper={}
-            crearCamper["id"]=input("Ingrese el nuevo id del camper")
+            crearCamper["id"]=int(input("Ingrese el nuevo id del camper: "))
             crearCamper["nombres"]=input("ingrese el nombre del camper: ")
             crearCamper["apellidos"]=input("Ingrese el apellido del camper: ")
             crearCamper["direccion"]=input("Ingresa la dirreccion del campers: ")
