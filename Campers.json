@@ -1,11 +1,10 @@
-{
-  "grupos": [
+[
+
     {
       "grupo": "T1",
-      "campers": [
-        {
-          "camper": {
-            "id": "1",
+      "campers":[
+         {
+            "id": 1,
             "nombres": "Juan Pablo",
             "apellidos": "Perez Gonzalez",
             "direccion": "Calle 123, Ciudad Imaginaria",
@@ -14,13 +13,18 @@
               "celular": "5551234567",
               "fijo": "5559876543"
             },
-            "estado": "No asignado",
+            "estado": "Inscrito",
             "riesgo": "No asignado",
-            "ruta": "No asignado"
+            "ruta": "No asignado",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
           },
-        {
-          "camper": {
-            "id": "2",
+          {
+          
+            "id": 2,
             "nombres": "Marada Alejandra",
             "apellidos": "Rodriguez Martnez",
             "direccion": "Avenida Principal, Ciudad Imaginaria",
@@ -30,13 +34,18 @@
               "fijo": "5558765432"
             },
             "estado": "No asignado",
-            "riesgo": "",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "3",
+            "riesgo": "no asignado",
+            "ruta": "no asignado",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+          
+          },
+          {
+          
+            "id": 3,
             "nombres": "Carlos Alberto",
             "apellidos": "Garcada Hernandez",
             "direccion": "Calle Central, Ciudad Imaginaria",
@@ -47,12 +56,17 @@
             },
             "estado": "Inscrito",
             "riesgo": "Bajo",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "4",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 4,
             "nombres": "Ana Gabriela",
             "apellidos": "Martnez Lopez",
             "direccion": "Avenida Norte, Ciudad Imaginaria",
@@ -63,12 +77,17 @@
             },
             "estado": "En proceso de ingreso",
             "riesgo": "Alto",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "5",
+            "ruta": "Java",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 5,
             "nombres": "Luis Eduardo",
             "apellidos": "Hernandez Ramirez",
             "direccion": "Calle Sur, Ciudad Imaginaria",
@@ -79,12 +98,17 @@
             },
             "estado": "Expulsado",
             "riesgo": "Alto",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "6",
+            "ruta": "python",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 6,
             "nombres": "Sofada Andrea",
             "apellidos": "Lupez Gomez",
             "direccion": "Calle Este, Ciudad Imaginaria",
@@ -95,12 +119,17 @@
             },
             "estado": "Retirado",
             "riesgo": "Bajo",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "7",
+            "ruta": "no asignado",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 7,
             "nombres": "Diego Alejandro",
             "apellidos": "Ramadrez Martinez",
             "direccion": "Avenida Oeste, Ciudad Imaginaria",
@@ -111,12 +140,17 @@
             },
             "estado": "Aprobado",
             "riesgo": "Bajo",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "8",
+            "ruta": "Java",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 8,
             "nombres": "Valeria Isabel",
             "apellidos": "Castro Sanchez",
             "direccion": "Calle 456, Ciudad Imaginaria",
@@ -127,12 +161,17 @@
             },
             "estado": "Inscrito",
             "riesgo": "Medio",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "9",
+            "ruta": "python",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 9,
             "nombres": "Mateo Alonso",
             "apellidos": "Flores Garcia",
             "direccion": "Avenida 789, Ciudad Imaginaria",
@@ -143,12 +182,17 @@
             },
             "estado": "Cursando",
             "riesgo": "Alto",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "10",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+          
+          },
+          {
+        
+            "id": 10,
             "nombres": "Julieta Victoria",
             "apellidos": "Gonzalez Martan",
             "direccion": "Calle 901, Ciudad Imaginaria",
@@ -159,12 +203,17 @@
             },
             "estado": "Graduado",
             "riesgo": "Bajo",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "11",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+          
+          },
+          {
+        
+            "id": 11,
             "nombres": "Daniel Sebastian",
             "apellidos": "Sanchez Gutierrez",
             "direccion": "Avenida 234, Ciudad Imaginaria",
@@ -175,12 +224,17 @@
             },
             "estado": "Inscrito",
             "riesgo": "Medio",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "12",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 12,
             "nombres": "Andrea Valentina",
             "apellidos": "Martan Gonzalez",
             "direccion": "Calle 567, Ciudad Imaginaria",
@@ -191,33 +245,22 @@
             },
             "estado": "Aprobado",
             "riesgo": "Bajo",
-            "ruta": ""
+            "ruta": "python",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
           }
-        },
+        
+        ]
+      },
+      {
+        "grupo": "T2",
+        "campers": [
         {
-          "camper": {
-            "id": "9",
-            "nombres": "camilo",
-            "apellidos": "vega",
-            "direccion": "vtyvivt",
-            "acudiente": "marta",
-            "telefonos": {
-              "celular": "1111111",
-              "fijo": "2222222"
-            },
-            "estado": "Inscrito",
-            "riesgo": "bajo",
-            "ruta": "Java"
-          }
-        }
-      ]
-    },
-    {
-      "grupo": "T2",
-      "campers": [
-        {
-          "camper": {
-            "id": "1",
+        
+            "id": 13,
             "nombres": "Juan Camilo",
             "apellidos": "Perez Gomes",
             "direccion": "Calle 128, Ciudad Imaginaria",
@@ -226,14 +269,19 @@
               "celular": "5551234568",
               "fijo": "5559876549"
             },
-            "estado": "Graduado",
+            "estado": "Inscrito",
             "riesgo": "Bajo",
-            "ruta": ""
-          }
+            "ruta": "Java",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
         },
         {
-          "camper": {
-            "id": "2",
+        
+            "id": 14,
             "nombres": "Ana Marada",
             "apellidos": "Rodriguez Lopez",
             "direccion": "Calle 123, Ciudad Imaginaria",
@@ -242,14 +290,19 @@
               "celular": "5553456789",
               "fijo": "5557890123"
             },
-            "estado": "Cursando",
+            "estado": "Inscrito",
             "riesgo": "Alto",
-            "ruta": ""
-          }
+            "ruta": "Java",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
         },
         {
-          "camper": {
-            "id": "3",
+        
+            "id": 15,
             "nombres": "Juan Esteban",
             "apellidos": "Sanchez Gomez",
             "direccion": "Avenida 456, Ciudad Imaginaria",
@@ -260,12 +313,17 @@
             },
             "estado": "Graduado",
             "riesgo": "Bajo",
-            "ruta": ""
-          }
+            "ruta": "python",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
         },
         {
-          "camper": {
-            "id": "4",
+        
+            "id": 16,
             "nombres": "Pablo Andres",
             "apellidos": "Sanchez Ramirez",
             "direccion": "Avenida 456, Ciudad Imaginaria",
@@ -276,12 +334,17 @@
             },
             "estado": "Graduado",
             "riesgo": "Bajo",
-            "ruta": ""
-          }
+            "ruta": "no asignado",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
         },
         {
-          "camper": {
-            "id": "5",
+        
+            "id": 17,
             "nombres": "Julia Alejandra",
             "apellidos": "Gonzalez Martinez",
             "direccion": "Calle 789, Ciudad Imaginaria",
@@ -292,12 +355,17 @@
             },
             "estado": "Aprobado",
             "riesgo": "Bajo",
-            "ruta": ""
-          }
+            "ruta": "no asignado",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
         },
         {
-          "camper": {
-            "id": "6",
+        
+            "id": 18,
             "nombres": "Martn Alejandro",
             "apellidos": "Duran Hernandez",
             "direccion": "Avenida 012, Ciudad Imaginaria",
@@ -308,12 +376,17 @@
             },
             "estado": "Retirado",
             "riesgo": "Bajo",
-            "ruta": ""
-          }
+            "ruta": "no asignado",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
         },
         {
-          "camper": {
-            "id": "7",
+        
+            "id": 19,
             "nombres": "Sofia Isabel",
             "apellidos": "Martadn Gonzalez",
             "direccion": "Calle 345, Ciudad Imaginaria",
@@ -324,12 +397,17 @@
             },
             "estado": "Inscrito",
             "riesgo": "Medio",
-            "ruta": ""
-          }
+            "ruta": "python",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
         },
         {
-          "camper": {
-            "id": "8",
+        
+            "id": 20,
             "nombres": "Diego Alejandro",
             "apellidos": "Lopez Garcada",
             "direccion": "Avenida 678, Ciudad Imaginaria",
@@ -340,12 +418,17 @@
             },
             "estado": "Aprobado",
             "riesgo": "Bajo",
-            "ruta": ""
-          }
+            "ruta": "python",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
         },
         {
-          "camper": {
-            "id": "9",
+        
+            "id": 21,
             "nombres": "Marcos Antonio",
             "apellidos": "Martinez Gomez",
             "direccion": "Avenida 890, Ciudad Imaginaria",
@@ -356,12 +439,17 @@
             },
             "estado": "Inscrito",
             "riesgo": "Medio",
-            "ruta": ""
-          }
+            "ruta": "no asignado",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
         },
         {
-          "camper": {
-            "id": "10",
+        
+            "id": 22,
             "nombres": "Elena Victoria",
             "apellidos": "Rodriguez Lopez",
             "direccion": "Calle 123, Ciudad Imaginaria",
@@ -372,12 +460,17 @@
             },
             "estado": "Cursando",
             "riesgo": "Alto",
-            "ruta": ""
-          }
+            "ruta": "no asignado",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
         },
         {
-          "camper": {
-            "id": "11",
+        
+            "id": 23,
             "nombres": "Valentina Sofia",
             "apellidos": "Ortega Martinez",
             "direccion": "Calle 678, Ciudad Imaginaria",
@@ -388,17 +481,21 @@
             },
             "estado": "Graduado",
             "riesgo": "Bajo",
-            "ruta": ""
+            "ruta": "no asignado",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
           }
-        }
-      ]
-    },
-    {
-      "grupo": "T3",
-      "campers": [
-        {
-          "camper": {
-            "id": "1",
+        ]
+      },
+     {
+        "grupo": "T3",
+        "campers": [
+          {
+        
+            "id": 24,
             "nombres": "Valentina Alejandra",
             "apellidos": "Garcia Martinez",
             "direccion": "Calle 901, Ciudad Imaginaria",
@@ -409,12 +506,17 @@
             },
             "estado": "Graduado",
             "riesgo": "Bajo",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "2",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 25,
             "nombres": "Alejandro David",
             "apellidos": "Fernandez Sanchez",
             "direccion": "Avenida 234, Ciudad Imaginaria",
@@ -425,28 +527,39 @@
             },
             "estado": "Cursando",
             "riesgo": "Alto",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "3",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 26,
             "nombres": "Camila Sofia",
             "apellidos": "Ramirez Gomez",
             "direccion": "Calle 567, Ciudad Imaginaria",
             "acudiente": "Diego Ramirez",
+        
             "telefonos": {
               "celular": "5550123456",
               "fijo": "5557890123"
             },
             "estado": "Expulsado",
             "riesgo": "Alto",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "4",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 27,
             "nombres": "Mateo Andres",
             "apellidos": "Martinez Gomez",
             "direccion": "Avenida 890, Ciudad Imaginaria",
@@ -457,12 +570,17 @@
             },
             "estado": "Inscrito",
             "riesgo": "Medio",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "5",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 28,
             "nombres": "Natalia Alejandra",
             "apellidos": "Ramirez Gomez",
             "direccion": "Calle 345, Ciudad Imaginaria",
@@ -473,12 +591,17 @@
             },
             "estado": "Inscrito",
             "riesgo": "Medio",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "6",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 29,
             "nombres": "Gabriel Alejandro",
             "apellidos": "Silva Gutierrez",
             "direccion": "Avenida 678, Ciudad Imaginaria",
@@ -489,12 +612,17 @@
             },
             "estado": "Aprobado",
             "riesgo": "Bajo",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "7",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 30,
             "nombres": "Lucia Valentina",
             "apellidos": "Gomez Sanchez",
             "direccion": "Calle 901, Ciudad Imaginaria",
@@ -505,12 +633,16 @@
             },
             "estado": "Graduado",
             "riesgo": "Bajo",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "8",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+          },
+          {
+        
+            "id": 31,
             "nombres": "Mateo Andres",
             "apellidos": "Fernandez Garcia",
             "direccion": "Avenida 234, Ciudad Imaginaria",
@@ -521,12 +653,17 @@
             },
             "estado": "Cursando",
             "riesgo": "Alto",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "9",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 32,
             "nombres": "Valeria Gabriela",
             "apellidos": "Perez Martinez",
             "direccion": "Calle 567, Ciudad Imaginaria",
@@ -537,12 +674,17 @@
             },
             "estado": "Expulsado",
             "riesgo": "Alto",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "10",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 33,
             "nombres": "Martin Alejandro",
             "apellidos": "Torres Rodriguez",
             "direccion": "Avenida 123, Ciudad Imaginaria",
@@ -553,12 +695,17 @@
             },
             "estado": "Cursando",
             "riesgo": "Alto",
-            "ruta": ""
-          }
-        },
-        {
-          "camper": {
-            "id": "11",
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
+        
+          },
+          {
+        
+            "id": 34,
             "nombres": "Alejandro Andres",
             "apellidos": "Vargas Hernandez",
             "direccion": "Avenida 890, Ciudad Imaginaria",
@@ -569,10 +716,15 @@
             },
             "estado": "Retirado",
             "riesgo": "Bajo",
-            "ruta": ""
+            "ruta": "",
+            "modulos":{
+              "modulo1":"no asignado",
+              "modulo2":"no asignado",
+              "modulo3":"no asignado"
+            }
           }
-        }
-      ]
-    }
-  ]
-}
+        ]
+     }
+    
+    
+    ]
