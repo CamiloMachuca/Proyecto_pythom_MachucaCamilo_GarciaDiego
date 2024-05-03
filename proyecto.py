@@ -54,6 +54,37 @@ def guardarArchivoTrainers(miDato):# se crea una funcion para guardar los cambio
     with open("trainers.json","w") as outfile:
         json.dump(miDato,outfile)
 
+def registrar_notas():
+            campers = mostrarCampers()
+            grupo_canmper = input("ingresa el grupo en el que el camper se encuetra asignado: ")
+            camper_id = int(input("Ingrese el ID del camper: "))
+            for camper in campers:
+                for campers in grupo["grupo"]:
+                    if camper_id == grupo["id"]:
+
+                #terminar funcion pendiente
+
+            if camper is None:
+                print("Camper no encontrado")
+                return 
+            notas = []
+            modulo = input("Ingrese el nombre del módulo: ")
+            nota_teorica = float(input("Ingrese la nota teórica: "))
+            nota_practica = float(input("Ingrese la nota práctica: "))
+            nota_taller1 = float(input("ingresa la nota del taller 1: "))
+            nota_taller2 = float(input("ingresa la nota del taller 2: "))
+            nota = {"camper_id": camper["id"], "modulo": modulo, "nota_teorica": nota_teorica, "nota_practica": nota_practica, "nota_taller1": nota_taller1, "nota_taller2": nota_taller2}
+            notas.append(nota)
+
+            promedio = (nota_teorica * 0.3) + (nota_practica * 0.6) + (nota_taller1 * 0.05) + (nota_taller2 * 0.05)
+            if promedio >= 60:
+                camper["estado"] = "Aprobado"
+            else:
+                camper["estado"] = "reprobado"
+                print("esfuersate al maximo en la proccima")   
+
+            print("Notas registradas exitosamente")
+            
 
 
 
@@ -183,10 +214,14 @@ while buclePrincipal==True:
         print("##########################################")
         print("============= Menu coordinador ===========")
         print("##########################################")
-        print("(1)Añadir nuevo campers\n(2)asignar notas a los campers\n(3)Asignar las rutas de entrenamiento a los campers\n(4)asignar nuevos modulos \n(5)asignar los trainers encargados de cada ruta\n(6)realizar reportes")
+        print("(1)agregar nota del examen de ingreso\n(2)Añadir nuevo campers\n(3)asignar notas a los campers\n(4)Asignar las rutas de entrenamiento a los campers\n(5)asignar nuevos modulos \n(6)asignar los trainers encargados de cada ruta\n(7)realizar reportes")
         opc=input("Ingrese la opcion deseada: ")
 
-        if opc=="1":#opcion para añadir un nuevo campers
+        if opc == "1": 
+
+            print("")
+
+        if opc=="2":#opcion para añadir un nuevo campers
             print("Opcion para añadir nuevos campers")
             print("Ingrese los datos para el nuevo camper")
             nuevoCamper= mostrarCampers()
@@ -207,16 +242,17 @@ while buclePrincipal==True:
             print("Se agrego correctamente al nuevo campers")
 
 
-        elif opc=="2":#opcion para asignar las notas a los campers
-            print("La nota de los campers son: ")
+        elif opc=="3":#opcion para asignar las notas a los campers
+            registrar_notas()
+            
 
 
-        elif opc=="3":#opcion para asignar las rutas de entrenamiento a los campers
+        elif opc=="4":#opcion para asignar las rutas de entrenamiento a los campers
             print()
 
 
 
-        elif opc=="4":# opcion para Crear nuevas rutas de entrenamiento
+        elif opc=="5":# opcion para Crear nuevas rutas de entrenamiento
             print("Ingrese")
             print("cree nuevas rutas o modulos de entrenamiento")
             diccionario_rutas={}# se crea un diccionario vacio para añadir los modulos
@@ -262,7 +298,7 @@ while buclePrincipal==True:
 
 
 
-        elif opc=="5":#opcion asignar los trainers encargados de cada ruta
+        elif opc=="6":#opcion asignar los trainers encargados de cada ruta
             print("Asigne las rutas a los trainers")
             lisTrainer=[]
             lisTrainer= mostrarTrainers()
@@ -300,7 +336,7 @@ while buclePrincipal==True:
                             print("Porfavor ingrese una opcion valida ")
             
             
-        elif opc=="6":# opcion para hacer un reporte
+        elif opc=="7":# opcion para hacer un reporte
             print("Opcion de Reporte")
             print("##########################################")
             print("========Menu de opciones Reportes=========")
@@ -311,6 +347,7 @@ while buclePrincipal==True:
             print("(4)Listar los **campers** que cuentan con bajo rendimiento.")
             print("(5)Listar los **campers** y **trainers** que se encuentren asociados a una ruta de entrenamiento.")
             print("(6)Mostrar cuantos **campers** perdieron y aprobaron cada uno de los módulos teniendo en cuenta la ruta de entrenamiento y el entrenador encargado.")
+            print("(7)volver al menu principal")
             respuesta=input("Ingrese la opcion deseada")
 
 
@@ -356,6 +393,11 @@ while buclePrincipal==True:
 
             elif respuesta=="4":
                 print("los campers con bajo rendimiento son: ")
+
+            elif respuesta == "7":
+                print("Se volvio al menu principal")
+                buli=False
+
     
     
     
