@@ -6,8 +6,10 @@
         "Trainers":"no hay traines asignados",
         "modulos":[
         {
-            "modulos":"no hay modulos asignados",
-            "fechaInicio":"10 de enero",
+            "modulo1":"Psein,Python",
+            "mudulo2":"Html,Css,Bootstrap",
+            "modulo3": "",
+            "fechaInicio":"no asignada",
             "fechaFin":"5 marzo"
         }
     ]
@@ -19,8 +21,8 @@
         "modulo":[
         {
             "modulos":"no hay modulos asignados",
-            "fechaInicio":"10 de marzo",
-            "fechaFin":"1 abril"
+            "fechaInicio":"no asignada",
+            "fechaFin":"no asignada"
         }
     ]
     },
@@ -31,8 +33,8 @@
         "modulo":[
         {
             "modulos":"no hay modulos asignados",
-            "fechaInicio":"10 de marzo",
-            "fechaFin":"25 de mayo"
+            "fechaInicio":"no asignada",
+            "fechaFin":"no asignada"
         }
     ]
 
