@@ -4,13 +4,15 @@
         "id":1,
         "ruta":"Java",
         "Trainers":"no hay traines asignados",
+        "fechaInicio":"01-02-2024",
+        "fechaFin":"01-12-2024",
         "modulos":[
         {
-            "modulo1":"Psein,Python",
-            "mudulo2":"Html,Css,Bootstrap",
-            "modulo3": "",
-            "fechaInicio":"no asignada",
-            "fechaFin":"5 marzo"
+            "Fundamentos_de_ programación":"Psein,Python",
+            "Programación Web":"Html,Css,Bootstrap",
+            "Programación formal":"JavaScript, C#",
+            "Bases de datos":"Mysql, MongoDb",
+            "Backend":"NetCore, Spring Boot"
         }
     ]
     },
@@ -18,11 +20,15 @@
         "id":2,
         "ruta":"NetCore",
         "Trainers":"no hay traines asignados",
-        "modulo":[
+        "fechaInicio":"01-02-2024",
+        "fechaFin":"01-12-2024",
+        "modulos":[   
         {
-            "modulos":"no hay modulos asignados",
-            "fechaInicio":"no asignada",
-            "fechaFin":"no asignada"
+            "Fundamentos_de_ programación":"Psein,Python",
+            "Programación Web":"Html,Css,Bootstrap, Psein,Python",
+            "Programación formal":"Java, C#",
+            "Bases de datos":"Postgresql, MongoDb",
+            "Backend":"NetCore, Express"
         }
     ]
     },
@@ -30,12 +36,17 @@
         "id":3,
         "ruta":"NodeJS",
         "Trainers":"no hay traines asignados",
-        "modulo":[
-        {
-            "modulos":"no hay modulos asignados",
-            "fechaInicio":"no asignada",
-            "fechaFin":"no asignada"
-        }
+        "fechaInicio":"01-02-2024",
+        "fechaFin":"01-12-2024",
+        "modulos":[
+            {
+                "Fundamentos de programación":"Psein,Python",
+                "Programación Web":"Html,Css,Bootstrap",
+                "Programación formal":"Java, C#,JavaScript",
+                "Bases de datos":"Postgresql, MongoDb,Mysql",
+                "Backend":"NetCore, Express,Spring Boot, NodeJS"
+                
+            }
     ]
 
     }

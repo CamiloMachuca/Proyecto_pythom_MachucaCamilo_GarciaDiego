@@ -1,6 +1,8 @@
 [
     {
         "grupo": "T1",
+        "ruta":"no asignado",
+        "trainer":"Pedro",
         "campers": [
             {
                 "id": 1,
@@ -14,7 +16,7 @@
                 },
                 "estado": "Inscrito",
                 "riesgo": "No asignado",
-                "ruta": "No asignado",
+                
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -33,7 +35,6 @@
                 },
                 "estado": "No asignado",
                 "riesgo": "no asignado",
-                "ruta": "no asignado",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -52,7 +53,6 @@
                 },
                 "estado": "Inscrito",
                 "riesgo": "Bajo",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -71,7 +71,6 @@
                 },
                 "estado": "En proceso de ingreso",
                 "riesgo": "Alto",
-                "ruta": "Java",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -90,7 +89,6 @@
                 },
                 "estado": "Expulsado",
                 "riesgo": "Alto",
-                "ruta": "python",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -109,7 +107,6 @@
                 },
                 "estado": "Retirado",
                 "riesgo": "Bajo",
-                "ruta": "no asignado",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -128,7 +125,6 @@
                 },
                 "estado": "Aprobado",
                 "riesgo": "Bajo",
-                "ruta": "Java",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -147,7 +143,6 @@
                 },
                 "estado": "Inscrito",
                 "riesgo": "Medio",
-                "ruta": "python",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -166,7 +161,6 @@
                 },
                 "estado": "Cursando",
                 "riesgo": "Alto",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -185,7 +179,6 @@
                 },
                 "estado": "Graduado",
                 "riesgo": "Bajo",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -204,7 +197,6 @@
                 },
                 "estado": "Inscrito",
                 "riesgo": "Medio",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -223,7 +215,6 @@
                 },
                 "estado": "Aprobado",
                 "riesgo": "Bajo",
-                "ruta": "python",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -234,6 +225,8 @@
     },
     {
         "grupo": "T2",
+        "ruta":"no asignado",
+        "trainer":"no asignado",
         "campers": [
             {
                 "id": 13,
@@ -247,7 +240,6 @@
                 },
                 "estado": "Inscrito",
                 "riesgo": "Bajo",
-                "ruta": "Java",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -266,7 +258,6 @@
                 },
                 "estado": "Inscrito",
                 "riesgo": "Alto",
-                "ruta": "Java",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -283,9 +274,8 @@
                     "celular": "5554567890",
                     "fijo": "5558901234"
                 },
-                "estado": "Graduado",
+                "estado": "Aprobado",
                 "riesgo": "Bajo",
-                "ruta": "python",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -304,7 +294,6 @@
                 },
                 "estado": "Graduado",
                 "riesgo": "Bajo",
-                "ruta": "no asignado",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -323,7 +312,6 @@
                 },
                 "estado": "Aprobado",
                 "riesgo": "Bajo",
-                "ruta": "no asignado",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -342,7 +330,6 @@
                 },
                 "estado": "Retirado",
                 "riesgo": "Bajo",
-                "ruta": "no asignado",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -361,7 +348,6 @@
                 },
                 "estado": "Inscrito",
                 "riesgo": "Medio",
-                "ruta": "python",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -380,7 +366,6 @@
                 },
                 "estado": "Aprobado",
                 "riesgo": "Bajo",
-                "ruta": "python",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -399,7 +384,6 @@
                 },
                 "estado": "Inscrito",
                 "riesgo": "Medio",
-                "ruta": "no asignado",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -418,7 +402,6 @@
                 },
                 "estado": "Cursando",
                 "riesgo": "Alto",
-                "ruta": "no asignado",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -435,9 +418,8 @@
                     "celular": "5554567890",
                     "fijo": "5553210987"
                 },
-                "estado": "Graduado",
+                "estado": "Aprobado",
                 "riesgo": "Bajo",
-                "ruta": "no asignado",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -448,6 +430,8 @@
     },
     {
         "grupo": "T3",
+        "ruta":"no asignado",
+        "trainer":"no asignado",
         "campers": [
             {
                 "id": 24,
@@ -459,9 +443,8 @@
                     "celular": "5558901234",
                     "fijo": "5550123456"
                 },
-                "estado": "Graduado",
+                "estado": "Inscrito",
                 "riesgo": "Bajo",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -478,9 +461,8 @@
                     "celular": "5559012345",
                     "fijo": "5556789012"
                 },
-                "estado": "Cursando",
+                "estado": "Inscrito",
                 "riesgo": "Alto",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -499,7 +481,6 @@
                 },
                 "estado": "Expulsado",
                 "riesgo": "Alto",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -518,7 +499,6 @@
                 },
                 "estado": "Inscrito",
                 "riesgo": "Medio",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -537,7 +517,6 @@
                 },
                 "estado": "Inscrito",
                 "riesgo": "Medio",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -556,7 +535,6 @@
                 },
                 "estado": "Aprobado",
                 "riesgo": "Bajo",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -573,9 +551,8 @@
                     "celular": "5558901234",
                     "fijo": "5557654321"
                 },
-                "estado": "Graduado",
+                "estado": "Expulsado",
                 "riesgo": "Bajo",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -592,9 +569,8 @@
                     "celular": "5559012345",
                     "fijo": "5556543210"
                 },
-                "estado": "Cursando",
+                "estado": "Aprobado",
                 "riesgo": "Alto",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -613,7 +589,6 @@
                 },
                 "estado": "Expulsado",
                 "riesgo": "Alto",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -630,9 +605,8 @@
                     "celular": "5555678901",
                     "fijo": "5552109876"
                 },
-                "estado": "Cursando",
+                "estado": "Inscrito",
                 "riesgo": "Alto",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -651,27 +625,13 @@
                 },
                 "estado": "Retirado",
                 "riesgo": "Bajo",
-                "ruta": "",
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
                     "modulo3": "no asignado"
                 }
-            },
-            {
-                "id": 113,
-                "nombres": "camilooo",
-                "apellidos": "vegaaaa",
-                "direccion": "tibu",
-                "acudiente": "martin",
-                "telefonos": {
-                    "celular": "111666",
-                    "fijo": "99999"
-                },
-                "estado": "no asignado",
-                "riesgo": "no asignado",
-                "ruta": "no asignado"
             }
+           
         ]
     }
 ]

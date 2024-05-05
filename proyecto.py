@@ -1,45 +1,4 @@
 
-# diseñar un programa para saber que camper paso de estar inscrito a aprobado 
-
-# Rutas disponibles: Ruta NodeJS, Ruta Java, Ruta NetCore capacidad maxima por ruta es de 33 campers
-
-# Hay clases cada 4 horas serian un total de 3 clases diarias
-
-# modulo de matricula Programa  para asignar la rutas de los campers esto lleva la Ruta, trainer encargado,fecha inicio y fecha final, salon de entrenamiento
-
-
-
-# crear trainers que trabajen en campuslands
-
-# Programa para saber la nota final de los campers ademas muestre los campers aprobados y los reprobados
-
-# programa para sacar el rendimiento de los campers en cada modulo y que permita consultar esos datos
-
-
-
-
-# funciones 
-# funcion para que el coordinador pueda registrar la nota de los campers que se han registrado y con ello cambiar su estado a “Aprobado”. La prueba es aprobada si el promedio entre la nota teórica y la nota practica es mayor o igual a 60.
-
-
-
-#funcion para mostrar la cantidad de campers que hay en estado de inscripcion
-# funcion para saber los campers que pasaron el examen de ingreso
-# funcion para que el coordinador pueda ver los datos de los trainers que trabajan en campusland
-# funcion para sacar el rendimineto de los campers esto llevaria la nota final de cada camper en el modulo en el que se encuentra
-# funcion para que el coordinador designe al trainer encargado de cada modulo 
-#funcion para que el trainer ingrese las notas de los campers
-#funcion para sacar la nota final de los campers en cada mudulo
-# funcion para guardar los datos de los campers que perdieron y aprobaron cada uno de los módulos teniendo en cuenta la ruta de entrenamiento y el entrenador encargado. debe de imprimirse el modulo en el que perdieron y con que trainers fue que perdieron
-
-
-# funcion para que La **coordinación académica** pueda crear nuevas rutas y estas rutas se añadan al Json de rutas, las cuales contienen la siguiente información (módulos):
-#- Fundamentos de programación (Introducción a la algoritmia, PSeInt y Python)
-#- Programación Web (HTML, CSS y Bootstrap).
-#- Programación formal (Java, JavaScript, C#).
-#- Bases de datos (Mysql, MongoDb y Postgresql). Cada ruta tiene un SGDB principal y un alternativo.
-#- Backend (NetCore, Spring Boot, NodeJS y Express).
-# ademas de crear nuevas rutas pueda designar los Trainers que van a estar a cargo de esas rutas
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import json
@@ -53,37 +12,6 @@ def mostrarTrainers():
 def guardarArchivoTrainers(miDato):# se crea una funcion para guardar los cambios que le realizemos al Json
     with open("trainers.json","w") as outfile:
         json.dump(miDato,outfile)
-
-def registrar_notas():
-            campers = mostrarCampers()
-            grupo_canmper = input("ingresa el grupo en el que el camper se encuetra asignado: ")
-            camper_id = int(input("Ingrese el ID del camper: "))
-            for camper in campers:
-                for campers in grupo["grupo"]:
-                    if camper_id == grupo["id"]:
-
-                #terminar funcion pendiente
-
-            if camper is None:
-                print("Camper no encontrado")
-                return 
-            notas = []
-            modulo = input("Ingrese el nombre del módulo: ")
-            nota_teorica = float(input("Ingrese la nota teórica: "))
-            nota_practica = float(input("Ingrese la nota práctica: "))
-            nota_taller1 = float(input("ingresa la nota del taller 1: "))
-            nota_taller2 = float(input("ingresa la nota del taller 2: "))
-            nota = {"camper_id": camper["id"], "modulo": modulo, "nota_teorica": nota_teorica, "nota_practica": nota_practica, "nota_taller1": nota_taller1, "nota_taller2": nota_taller2}
-            notas.append(nota)
-
-            promedio = (nota_teorica * 0.3) + (nota_practica * 0.6) + (nota_taller1 * 0.05) + (nota_taller2 * 0.05)
-            if promedio >= 60:
-                camper["estado"] = "Aprobado"
-            else:
-                camper["estado"] = "reprobado"
-                print("esfuersate al maximo en la proccima")   
-
-            print("Notas registradas exitosamente")
             
 
 
@@ -126,10 +54,6 @@ def guardarArchivoRutas(miDato1):# se crea una funcion para guardar los cambios 
 
 
 
-
-
-
-
 buclePrincipal=True
 while buclePrincipal==True:
     print("##########################################")
@@ -138,7 +62,7 @@ while buclePrincipal==True:
     print("(1) campers")# opcion realizada 
     print("(2)Trainers")# opcion realizada
     print("(3)coordinador")
-    print("(4)finalizar programa")
+    print("(4)finalizar programa")# opcion realizada
     op=input("que opcion eliges: ")
 
     if op=="1":
@@ -147,7 +71,7 @@ while buclePrincipal==True:
             print("##########################################")
             print("================ Menu campers ==============")
             print("##########################################")
-            print("(1)mostrar datos del campers\n(2)volver al menu principal")
+            print("(1)mostrar mis datos como campers\n(2)volver al menu principal")
             opcion=input("Ingrese la opcion deseada: ")
                 
             if opcion=="1":
@@ -211,192 +135,291 @@ while buclePrincipal==True:
 
 
     elif op=="3":
-        print("##########################################")
-        print("============= Menu coordinador ===========")
-        print("##########################################")
-        print("(1)agregar nota del examen de ingreso\n(2)Añadir nuevo campers\n(3)asignar notas a los campers\n(4)Asignar las rutas de entrenamiento a los campers\n(5)asignar nuevos modulos \n(6)asignar los trainers encargados de cada ruta\n(7)realizar reportes")
-        opc=input("Ingrese la opcion deseada: ")
+        bucleCoordinador=True
+        while bucleCoordinador==True:
+            print("##########################################")
+            print("============= Menu coordinador ===========")
+            print("##########################################")
+            print("(1) Agregar nota del examen de ingreso\n(2) Añadir nuevo campers\n(3) Asignar notas a los campers\n(4) Asignar las rutas de entrenamiento a los grupos\n(5) Crear nuevas rutas\n(6) Asignar los trainers encargados de cada ruta\n(7) Realizar reportes\n(8) Salir al menu principal")
+            opc=input("Ingrese la opcion deseada: ")
 
-        if opc == "1": 
+            if opc == "1": # Falta coregir esta opcion
+                campers = mostrarCampers()
+                grupo_canmper = input("ingresa el grupo en el que el camper se encuetra asignado: ")
+                camper_id = int(input("Ingrese el ID del camper: "))
+                for grupo in campers:
+                    if grupo["grupo"]==grupo_canmper:
+                        for camper in grupo["campers"]:
+                            if camper["id"]==camper_id:
+                                    modulo = input("Ingrese el nombre del módulo: ")
+                                    nota_teorica = float(input("Ingrese la nota teórica: "))
+                                    nota_practica = float(input("Ingrese la nota práctica: "))
+                                    nota_taller1 = float(input("ingresa la nota del taller 1: "))
+                                    nota_taller2 = float(input("ingresa la nota del taller 2: "))
+                                    camper["modulos"][modulo]={
+                                        "nota_teorica": nota_teorica,
+                                        "nota_practica": nota_practica,
+                                        "nota_taller1": nota_taller1,
+                                        "nota_taller2": nota_taller2
+                                    }
+                                    
+                                    promedio = (camper["nota_teorica"]*0.3)+(camper["nota_practica"]*0.6)+(camper["nota_taller1"]*0.05)+(camper["nota_taller2"]*0.05)
+                                    if promedio>= 60:
+                                        camper["estado"]="Aprobado"
+                                    else:
+                                        camper["estado"]="Reprobado"
 
-            print("")
-
-        if opc=="2":#opcion para añadir un nuevo campers
-            print("Opcion para añadir nuevos campers")
-            print("Ingrese los datos para el nuevo camper")
-            nuevoCamper= mostrarCampers()
-            crearCamper={}
-            crearCamper["id"]=int(input("Ingrese el nuevo id del camper: "))
-            crearCamper["nombres"]=input("ingrese el nombre del camper: ")
-            crearCamper["apellidos"]=input("Ingrese el apellido del camper: ")
-            crearCamper["direccion"]=input("Ingresa la dirreccion del campers: ")
-            crearCamper["acudiente"]=input("ingrese el nombre del acudiente: ")
-            crearCamper["telefonos"]={"celular": input("Ingrese el numero del telefono celular: "),"fijo":input("Ingrese el numero del telefono fijo: ")}
-            crearCamper["estado"]=input("ingrese el estado en el que se encuentra el camper: ")
-            crearCamper["riesgo"]=input("Ingrese el riesgo en el que se encuentra el camper: ")
-            crearCamper["ruta"]=input("Ingresa la ruta que va a seguir el campers: ")
-            
-            n=int(input("En que grupo desea agregar al nuevo campers se encuentran los grupos: (0)=T1, (1)=T2, (2)=T3: "))
-            nuevoCamper[n]["campers"].append(crearCamper)
-            guardarArchivoCampers(nuevoCamper)
-            print("Se agrego correctamente al nuevo campers")
-
-
-        elif opc=="3":#opcion para asignar las notas a los campers
-            registrar_notas()
-            
-
-
-        elif opc=="4":#opcion para asignar las rutas de entrenamiento a los campers
-            print()
-
-
-
-        elif opc=="5":# opcion para Crear nuevas rutas de entrenamiento
-            print("Ingrese")
-            print("cree nuevas rutas o modulos de entrenamiento")
-            diccionario_rutas={}# se crea un diccionario vacio para añadir los modulos
-            diccionario_rutas.update({"programacion formal":"Java, JavaScript, c#", "bases de datos":"Mysql, mongoDb, Postgresql", "backend": "NetCore, Spring Boot, NodeJs, Express"})
-            print(diccionario_rutas)
-            print("A que ruta le quieres añadir mas modulos")
-            print("(1)Ruta NodeJS\n(2)Ruta Java\n(3)Ruta NetCore")
-            id=int(input("Ingrese la opcion deseada: "))
-            listaRutass=[]
-            listaRutass=mostrarRutas()
-            bucleRuta=True
-            while bucleRuta==True:# se crea un bucle para ver si el coordinador quiere seguir asignando rutas a los trainers
-                bucl=True
-                while bucl==True:
-                    for dato in listaRutass:
-                        for rutas in ["modulos"]:
-                            if  rutas["id"]==id:
-                                modulo=input("Ingrese el modulo que le va a asignar a la ruta: ")
-                                rutas["modulos"]= modulo
-                                guardarArchivoRutas(listaRutass)
-                                print("modulos asignados correctamente")
-                                print()
-                                bu=True
-                                bucl=False
-
-
-                while bu==True:
-                    print("desea terminar de asignar las rutas (si) o (no)")
-                    res=input()
-                    if res=="si":
-                        print("se finalizo la asignacion de las rutas a los Trainers")
-                        bucleTrainer=False
-                        bu=False
-                        bucl=False
-                    elif res=="no":
-                        bu=False
-                        print("continue asignandole las rutas a los trainers ")
-                    else:
-                        print("Porfavor ingrese una opcion valida ")
-
-
-
-
-
-
-        elif opc=="6":#opcion asignar los trainers encargados de cada ruta
-            print("Asigne las rutas a los trainers")
-            lisTrainer=[]
-            lisTrainer= mostrarTrainers()
-            print()
-            bucleTrainer=True
-            bu=True
-            
-            while bucleTrainer==True:# se crea un bucle para ver si el coordinador quiere seguir asignando rutas a los trainers
-                bucl=True
-                while bucl==True:
-                    id=int(input("Ingrese el ID del trainer al cual le vas a asignar la ruta: "))
-                    
-                    for dato in lisTrainer:
-                        for trainers in dato["trainer"]:
-                            if  trainers["id"]==id:
-                                ruta=input("Ingrese la ruta que le va a asignar al trainer: ")
-                                trainers["ruta"]= ruta
-                                guardarArchivoTrainers(lisTrainer)
-                                print("Ruta asignada correctamente")
-                                print()
-                                bu=True
-                                bucl=False
-                    while bu==True:
-                        print("desea terminar de asignar las rutas (si) o (no)")
-                        res=input()
-                        if res=="si":
-                            print("se finalizo la asignacion de las rutas a los Trainers")
-                            bucleTrainer=False
-                            bu=False
-                            bucl=False
-                        elif res=="no":
-                            bu=False
-                            print("continue asignandole las rutas a los trainers ")
+                                    guardarArchivoCampers(campers)
+                                    break
                         else:
-                            print("Porfavor ingrese una opcion valida ")
-            
-            
-        elif opc=="7":# opcion para hacer un reporte
-            print("Opcion de Reporte")
-            print("##########################################")
-            print("========Menu de opciones Reportes=========")
-            print("##########################################")
-            print("(1)Listar los **campers** que se encuentren en estado de inscrito.")# opcion realizada correctamente
-            print("(2)Listar los **campers** que aprobaron el examen inicial.")
-            print("(3)Listar los entrenadores que se encuentran trabajando con **CampusLands**.")#opcion realizada correctamente
-            print("(4)Listar los **campers** que cuentan con bajo rendimiento.")
-            print("(5)Listar los **campers** y **trainers** que se encuentren asociados a una ruta de entrenamiento.")
-            print("(6)Mostrar cuantos **campers** perdieron y aprobaron cada uno de los módulos teniendo en cuenta la ruta de entrenamiento y el entrenador encargado.")
-            print("(7)volver al menu principal")
-            respuesta=input("Ingrese la opcion deseada")
+                            continue
+                        break
+                    else:
+                        print("camper no encontrado")
+                    
 
-
-            if respuesta=="1":
-                print("Los campers en estado de inscrito son: ")
-                datosCampers= mostrarCampers()
-                campersInscritos=[]# se crea una lista para separar a los campers que pasaron la inscipcion
+            elif opc=="2":#opcion para añadir un nuevo campers
+                print("Opcion para añadir nuevos campers")
+                print("Ingrese los datos para el nuevo camper")
+                nuevoCamper= mostrarCampers()
+                crearCamper={}
+                crearCamper["id"]=int(input("Ingrese el nuevo id del camper: "))
+                crearCamper["nombres"]=input("ingrese el nombre del camper: ")
+                crearCamper["apellidos"]=input("Ingrese el apellido del camper: ")
+                crearCamper["direccion"]=input("Ingresa la dirreccion del campers: ")
+                crearCamper["acudiente"]=input("ingrese el nombre del acudiente: ")
+                crearCamper["telefonos"]={"celular": input("Ingrese el numero del telefono celular: "),"fijo":input("Ingrese el numero del telefono fijo: ")}
+                crearCamper["estado"]=input("ingrese el estado en el que se encuentra el camper: ")
+                crearCamper["riesgo"]=input("Ingrese el riesgo en el que se encuentra el camper: ")
+                crearCamper["ruta"]=input("Ingresa la ruta que va a seguir el campers: ")
+                crearCamper["modulos"]={"modulo1":input("Ingrese la nota del modulo1 si ya lo completaste si no presione ENTER: "),"modulo2": input("Ingrese la nota del modulo2 si ya lo completaste si no presione ENTER: "), "modulo3": input("Ingrese la nota del modulo3 si ya lo completaste si no presione ENTER: ")}
                 
-                for grupo in datosCampers:
-                        
-                        for campe in grupo["campers"]:
-                            if campe["estado"]=="Inscrito":
-                                campersInscritos.append(campe)
-                cantidadCampers= len(campersInscritos)
-                for i in campersInscritos:
-                    print("ID:",i["id"])
-                    print("Nombre:",i["nombres"])
-                    print("Apellido:",i["apellidos"])
-                    print("direccion:",i["direccion"])
-                    print("acudiente",i["acudiente"])
-                    print("estado",i["estado"])
-                print("La cantidad de campers inscritos son: ",cantidadCampers)
+                n=int(input("En que grupo desea agregar al nuevo campers se encuentran los grupos: (0)=T1, (1)=T2, (2)=T3: "))
+                nuevoCamper[n]["campers"].append(crearCamper)
+                guardarArchivoCampers(nuevoCamper)
+                print("Se agrego correctamente al nuevo campers")
 
 
-
-
-            elif respuesta=="3":
-                print("Los trainers que trabajan en campuslands son: ")
+            elif opc=="3":#opcion para asignar las notas a los campers
+                print("Ingrese el id del camper al cual le vas a asignar la nota: ")
                 
+
+
+            elif opc=="4":#opcion para asignar las rutas de entrenamiento de los grupos
+                print(" A que grupo desea asignarle la ruta estan los grupos: T1, T2,T3")
+
+
+
+            elif opc=="5":# opcion para Crear nuevas rutas de entrenamiento     
+                print("Ingrese")
+                print("cree nuevas rutas o modulos de entrenamiento")
+
+
+
+
+
+
+            elif opc=="6":#opcion asignar los trainers encargados de cada ruta
+                print("Asigne las rutas a los trainers")
+                lisTrainer=[]
                 lisTrainer= mostrarTrainers()
-                cantidadTrainers= len(lisTrainer)# se cuenta la cantidad de trainers que hay en el json
-                for trainer in lisTrainer:
-                        posicion=trainer["trainer"][0]# se imprimen los trainers desde la pocicion 0
-                        print("Nombre:",posicion["nombre"])
-                        print("Apellido:",posicion["apellido"])
-                        print("Horario:",posicion["Horario"])
-                        print("ruta",posicion["ruta"])
-                        print("grupo",posicion["grupo"])
+                print()
+                bucleTrainer=True
+                bu=True
+                
+                while bucleTrainer==True:# se crea un bucle para ver si el coordinador quiere seguir asignando rutas a los trainers
+                    bucl=True
+                    while bucl==True:
+                        id=int(input("Ingrese el ID del trainer al cual le vas a asignar la ruta: "))
+                        
+                        for dato in lisTrainer:
+                            for trainers in dato["trainer"]:
+                                if  trainers["id"]==id:
+                                    ruta=input("Ingrese la ruta que le va a asignar al trainer: ")
+                                    trainers["ruta"]= ruta
+                                    guardarArchivoTrainers(lisTrainer)
+                                    print("Ruta asignada correctamente")
+                                    print()
+                                    bu=True
+                                    bucl=False
+                        while bu==True:
+                            print("desea terminar de asignar las rutas (si) o (no)")
+                            res=input()
+                            if res=="si":
+                                print("se finalizo la asignacion de las rutas a los Trainers")
+                                bucleTrainer=False
+                                bu=False
+                                bucl=False
+                            elif res=="no":
+                                bu=False
+                                print("continue asignandole las rutas a los trainers ")
+                            else:
+                                print("Porfavor ingrese una opcion valida ")
+                
+                
+            elif opc=="7":# opcion para hacer un reporte
+                bucleReportes=True
+                while bucleReportes==True:
+
+                    print("Opcion de Reporte")
+                    print("##########################################")
+                    print("========Menu de opciones Reportes=========")
+                    print("##########################################")
+                    print("(1)Listar los **campers** que se encuentren en estado de inscrito.")# opcion realizada correctamente
+                    print("(2)Listar los **campers** que aprobaron el examen inicial.")# opcion realizada correctamente
+                    print("(3)Listar los entrenadores que se encuentran trabajando con **CampusLands**.")#opcion realizada correctamente
+                    print("(4)Listar los **campers** que cuentan con bajo rendimiento.")# opcion realizada correctamente
+                    print("(5)Listar los **campers** y **trainers** que se encuentren asociados a una ruta de entrenamiento.")# opcion realizada correctamente
+                    print("(6)Mostrar cuantos **campers** perdieron y aprobaron cada uno de los módulos teniendo en cuenta la ruta de entrenamiento y el entrenador encargado.")#Falta
+                    print("(7)volver al menu principal")# opcion realizada correctamente
+                    respuesta=input("Ingrese la opcion deseada")
+
+
+                    if respuesta=="1":
+                        print("=====================================")
+                        print("Los campers en estado de inscrito son: ")
+                        print("=====================================")
+                        datosCampers= mostrarCampers()
+                        campersInscritos=[]# se crea una lista para separar a los campers que pasaron la inscipcion
+                        
+                        for grupo in datosCampers:
+                                
+                                for campe in grupo["campers"]:
+                                    if campe["estado"]=="Inscrito":
+                                        campersInscritos.append(campe)
+                        cantidadCampers= len(campersInscritos)
+                        for i in campersInscritos:
+                            print("ID:",i["id"])
+                            print("Nombre:",i["nombres"])
+                            print("Apellido:",i["apellidos"])
+                            print("direccion:",i["direccion"])
+                            print("acudiente",i["acudiente"])
+                            print("estado",i["estado"])
+                        print("La cantidad de campers inscritos son: ",cantidadCampers)
+
+
+                    elif respuesta=="2":# opcion para Listar los **campers** que aprobaron el examen inicial
+                        print("================================================")
+                        print("Los campers que aprobaron el examen inicial son:")
+                        print("================================================")
+                        datosCampers= mostrarCampers()
+                        campersAprobados=[]# se crea una lista para separar a los campers que pasaron la inscipcion
+
+                        for grupo in datosCampers:
+                                
+                                for campe in grupo["campers"]:
+                                    if campe["estado"]=="Aprobado":
+                                        campersAprobados.append(campe)
+                        cantidadCampers= len(campersAprobados)
+                        for i in campersAprobados:
+                            print("ID:",i["id"])
+                            print("Nombre:",i["nombres"])
+                            print("Apellido:",i["apellidos"])
+                            print("direccion:",i["direccion"])
+                            print("acudiente",i["acudiente"])
+                            print("estado",i["estado"])
+                        print("La cantidad de campers que aprobaron el examen inicial son: ",cantidadCampers)
+
+
+
+
+                    elif respuesta=="3":#opcion para listar los trainers que trabajan en campusland 
+                        print("==============================================")
+                        print("Los trainers que trabajan en campuslands son: ")
+                        print("==============================================")
+                        lisTrainer= mostrarTrainers()
+                        cantidadTrainers= len(lisTrainer)# se cuenta la cantidad de trainers que hay en el json
+                        for trainer in lisTrainer:
+                                posicion=trainer["trainer"][0]# se imprimen los trainers desde la pocicion 0
+                                print("Nombre:",posicion["nombre"])
+                                print("Apellido:",posicion["apellido"])
+                                print("Horario:",posicion["Horario"])
+                                print("ruta",posicion["ruta"])
+                                print("grupo",posicion["grupo"])
+                                print()
+                        print("La cantidad de Trainers trabajando en campuslands son:", cantidadTrainers)
+
+
+
+                    elif respuesta=="4":
+                        print("=======================================")
+                        print("los campers con bajo rendimiento son: ")
+                        print("=======================================")
+                        datosCampers= mostrarCampers()
+                        campersRendimientoBajo=[]# se crea una lista para separar a los campers con bajo rendimiento
+
+                        for grupo in datosCampers:
+                                
+                                for campe in grupo["campers"]:
+                                    if campe["riesgo"]=="Bajo":
+                                        campersRendimientoBajo.append(campe)
+                        cantidadCampers= len(campersRendimientoBajo)
+                        for i in campersRendimientoBajo:
+                            print("ID:",i["id"])
+                            print("Nombre:",i["nombres"])
+                            print("Apellido:",i["apellidos"])
+                            print("direccion:",i["direccion"])
+                            print("acudiente",i["acudiente"])
+                            print("riesgo",i["riesgo"])
+                        print("La cantidad de campers con bajo rendimiento son: ",cantidadCampers)
+                    
+                    elif respuesta=="5":
+                        print("===========================================================================================")
+                        print("los **campers** y **trainers** que se encuentren asociados a una ruta de entrenamiento son:")
+                        print("===========================================================================================")
                         print()
-                print("La cantidad de Trainers trabajando en campuslands son:", cantidadTrainers)
+                        print("=====================================")
+                        print("Los campers asociados a una ruta son: ")
+                        print("=====================================")
+                        datosCampers= mostrarCampers()
+                        campersInscritos=[]# se crea una lista para separar a los campers que pasaron la inscipcion
+                        
+                        for grupo in datosCampers:
+                                
+                                for campe in grupo["campers"]:
+                                    if campe["estado"]=="Aprobado":
+                                        campersInscritos.append(campe)
+                        cantidadCampers= len(campersInscritos)
+                        for i in campersInscritos:
+                            print("ID:",i["id"])
+                            print("Nombre:",i["nombres"])
+                            print("Apellido:",i["apellidos"])
+                            print("direccion:",i["direccion"])
+                            print("acudiente",i["acudiente"])
+                            print("estado",i["estado"])
+                        print("La cantidad de campers asociados a una ruta son: ",cantidadCampers)
+                        print()
+                        print("======================================")
+                        print("LOS TRAINERS ASOCIADOS A UNA RUTA SON:")
+                        print("======================================")
+                        lisTrainer= mostrarTrainers()
+                        trainersRutas=[]
+                        for trainerr in lisTrainer:
+                            for trainer in trainerr["trainer"]:
+                                if trainer["ruta"]!="No asignada":
+                                    trainersRutas.append(trainer)
+                        cantidadTrainers=len(trainersRutas)
+                        for posicion in trainersRutas:
+                                    
+                            print("Nombre:",posicion["nombre"])
+                            print("Apellido:",posicion["apellido"])
+                            print("Horario:",posicion["Horario"])
+                            print("ruta",posicion["ruta"])
+                            print("grupo",posicion["grupo"])
+                            print()
+                        print("La cantidad de Trainers que se encuentran asociados a una ruta de entrenamiento son: ",cantidadTrainers)
 
 
+                    
+                    
+                    
+                    elif respuesta == "7":
+                        print("Se volvio al menu principal")
+                        bucleReportes=False
 
-            elif respuesta=="4":
-                print("los campers con bajo rendimiento son: ")
-
-            elif respuesta == "7":
+            elif opc=="8":
                 print("Se volvio al menu principal")
-                buli=False
+                bucleCoordinador=False
 
     
     
