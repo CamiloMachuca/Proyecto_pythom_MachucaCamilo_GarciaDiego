@@ -27,6 +27,7 @@ def mostrarCampers():
         listaCampers= json.load(openfile)
 
     return listaCampers
+
 def guardarArchivoCampers(miData):# se crea una funcion para guardar los cambios que le realizemos al Json
     with open("Campers.json","w") as outfile:
         json.dump(miData,outfile)
@@ -37,11 +38,14 @@ def guardarArchivoCampers(miData):# se crea una funcion para guardar los cambios
 
 
 
+
+
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import json
-# funcion para mostrar los datos del Json
 def mostrarRutas():
     listaRutas=[]
-    with open('rutas.json','r') as openfile:
+    with open('rutas.json','rb') as openfile:
         listaRutas= json.load(openfile)
 
     return listaRutas
@@ -49,9 +53,12 @@ def guardarArchivoRutas(miDato1):# se crea una funcion para guardar los cambios 
     with open("rutas.json","w") as outfile:
         json.dump(miDato1,outfile)
 
-
-
-
+print(mostrarRutas())
+def calcularEstadoCampers(total_score):
+    if total_score>=60:
+        return "Aprobado"
+    else:
+        return "Reprobado"
 
 
 buclePrincipal=True
@@ -163,17 +170,14 @@ while buclePrincipal==True:
                                         "nota_taller2": nota_taller2
                                     }
                                     
-                                    promedio = (camper["nota_teorica"]*0.3)+(camper["nota_practica"]*0.6)+(camper["nota_taller1"]*0.05)+(camper["nota_taller2"]*0.05)
-                                    if promedio>= 60:
-                                        camper["estado"]="Aprobado"
-                                    else:
-                                        camper["estado"]="Reprobado"
-
+                                    tatal_score=nota_teorica*0.3 + nota_practica*0.6+nota_taller1*0.05+nota_taller2*0.05
+                                    camper["estado"]= calcularEstadoCampers(total_score)
                                     guardarArchivoCampers(campers)
-                                    break
-                        else:
-                            continue
-                        break
+                                    print("nota guardada correctamente")
+                                    
+                            else:
+                                continue
+                            break
                     else:
                         print("camper no encontrado")
                     
@@ -210,9 +214,23 @@ while buclePrincipal==True:
 
 
 
-            elif opc=="5":# opcion para Crear nuevas rutas de entrenamiento     
-                print("Ingrese")
-                print("cree nuevas rutas o modulos de entrenamiento")
+            elif opc=="5":# opcion para Crear nuevas rutas de entrenamiento 
+                print("Ingrese los datos para la nueva ruta de entrenamiento")
+                nuevasRutas = mostrarRutas()
+                print(nuevasRutas)
+                crearRuta={}
+                crearRuta["id"]=len (nuevasRutas[0]["ruta"])+1
+                crearRuta["ruta"]=input("ingrese la nombre de la nueva ruta: ")
+                crearRuta["Trainers"]=input("Ingrese el nombre del Trainer encargado de esta ruta: ")
+                crearRuta["fechaInicio"]=input("Ingrese la fecha de inicio de esta ruta: ")
+                crearRuta["fechaFin"]=input("ingrese la fecha final de esta ruta : ")
+                crearRuta["modulos"]={"Fundamentos_de_ programación": input("Ingrese las materias de este modulo: "),"Programación Web":input("Ingrese las materias de este modulo: "),"Programación formal": input("Ingrese las materias de este modulo: "),"Bases de datos": input("ingrese las materias de este modulo: "),"Backend":input("Ingrese las materias de este modulo: ")}
+                nuevasRutas.append(crearRuta)
+                guardarArchivoRutas(nuevasRutas)
+                print("Se agrego correctamente la nueva ruta")
+                
+
+
 
 
 
