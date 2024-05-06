@@ -99,9 +99,7 @@ while buclePrincipal==True:
             if opcion=="2":
                 print("Se volvio al menu principal")
                 buli=False
-            else:
-                print("Porfavor ingrese una opcion valida")
-
+            
 
 
     elif op=="2":
@@ -307,7 +305,7 @@ while buclePrincipal==True:
             print("(1) Agregar nota del examen de ingreso\n(2) Añadir nuevo campers\n(3) Asignar notas a los campers\n(4) Asignar las rutas de entrenamiento a los grupos\n(5) Crear nuevas rutas\n(6) Asignar los trainers encargados de cada ruta\n(7) Realizar reportes\n(8) Salir al menu principal")
             opc=input("Ingrese la opcion deseada: ")
 
-            if opc == "1": # Falta coregir esta opcion
+            if opc == "1":
                 campers = mostrarCampers()
                 campersInscritos = []  # Lista para almacenar campistas inscritos
 

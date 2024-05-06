@@ -56,7 +56,7 @@
         "direccion": "Avenida Norte, Ciudad Imaginaria",
         "acudiente": "Pedro Martadnez",
         "telefonos": { "celular": "5554567890", "fijo": "5556543210" },
-        "estado": "En proceso de ingreso",
+        "estado": "Inscrito",
         "riesgo": "Alto",
         "modulos": {
           "modulo1": "no asignado",
@@ -71,7 +71,7 @@
         "direccion": "Calle Sur, Ciudad Imaginaria",
         "acudiente": "Laura Hernandez",
         "telefonos": { "celular": "5555678901", "fijo": "5555432109" },
-        "estado": "Expulsado",
+        "estado": "Reprobado",
         "riesgo": "Alto",
         "modulos": {
           "modulo1": "no asignado",
@@ -86,7 +86,7 @@
         "direccion": "Calle Este, Ciudad Imaginaria",
         "acudiente": "Pablo Lopez",
         "telefonos": { "celular": "5556789012", "fijo": "5554321098" },
-        "estado": "Retirado",
+        "estado": "Reprobado",
         "riesgo": "Bajo",
         "modulos": {
           "modulo1": "no asignado",
@@ -101,7 +101,7 @@
         "direccion": "Avenida Oeste, Ciudad Imaginaria",
         "acudiente": "Andrea Ramadrez",
         "telefonos": { "celular": "5557890123", "fijo": "5553210987" },
-        "estado": "Aprobado",
+        "estado": "Inscrito",
         "riesgo": "Bajo",
         "modulos": {
           "modulo1": "no asignado",
@@ -176,7 +176,7 @@
         "direccion": "Calle 567, Ciudad Imaginaria",
         "acudiente": "Marcos Martan",
         "telefonos": { "celular": "5552345678", "fijo": "5555432109" },
-        "estado": "Aprobado",
+        "estado": "Cursando",
         "riesgo": "Bajo",
         "modulos": {
           "modulo1": "no asignado",
@@ -228,7 +228,7 @@
         "direccion": "Avenida 456, Ciudad Imaginaria",
         "acudiente": "Ana Sanchez",
         "telefonos": { "celular": "5554567890", "fijo": "5558901234" },
-        "estado": "Aprobado",
+        "estado": "Inscrito",
         "riesgo": "Bajo",
         "modulos": {
           "modulo1": "no asignado",
@@ -258,7 +258,7 @@
         "direccion": "Calle 789, Ciudad Imaginaria",
         "acudiente": "Juan Gonzalez",
         "telefonos": { "celular": "5554567890", "fijo": "5559012345" },
-        "estado": "Aprobado",
+        "estado": "Inscrito",
         "riesgo": "Bajo",
         "modulos": {
           "modulo1": "no asignado",
@@ -273,7 +273,7 @@
         "direccion": "Avenida 012, Ciudad Imaginaria",
         "acudiente": "Marta Duraz",
         "telefonos": { "celular": "5555678901", "fijo": "5552345678" },
-        "estado": "Retirado",
+        "estado": "Reprobado",
         "riesgo": "Bajo",
         "modulos": {
           "modulo1": "no asignado",
@@ -303,7 +303,7 @@
         "direccion": "Avenida 678, Ciudad Imaginaria",
         "acudiente": "Laura Lopez",
         "telefonos": { "celular": "5557890123", "fijo": "5559012345" },
-        "estado": "Aprobado",
+        "estado": "Inscrito",
         "riesgo": "Bajo",
         "modulos": {
           "modulo1": "no asignado",
