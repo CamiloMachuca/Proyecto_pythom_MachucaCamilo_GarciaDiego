@@ -54,13 +54,6 @@ def guardarArchivoRutas(miDato1):# se crea una funcion para guardar los cambios 
         json.dump(miDato1,outfile)
 
 
-def calcularEstadoCampers(total_score):
-    if total_score>=60:
-        return "Aprobado"
-    else:
-        return "Reprobado"
-
-
 buclePrincipal=True
 while buclePrincipal==True:
     print("##########################################")
@@ -755,6 +748,6 @@ while buclePrincipal==True:
 
 
 
-
+#proyecro desarrollado por colaboradores Camilo Machuca, Diego Garcia - campers - Campuslands_Tibu 
 
 
