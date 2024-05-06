@@ -1,8 +1,8 @@
 [
     {
         "grupo": "T1",
-        "ruta":"no asignado",
-        "trainer":"Pedro",
+        "ruta": "no asignado",
+        "trainer": "Pedro",
         "campers": [
             {
                 "id": 1,
@@ -16,7 +16,6 @@
                 },
                 "estado": "Inscrito",
                 "riesgo": "No asignado",
-                
                 "modulos": {
                     "modulo1": "no asignado",
                     "modulo2": "no asignado",
@@ -225,8 +224,8 @@
     },
     {
         "grupo": "T2",
-        "ruta":"no asignado",
-        "trainer":"no asignado",
+        "ruta": "no asignado",
+        "trainer": "no asignado",
         "campers": [
             {
                 "id": 13,
@@ -430,8 +429,8 @@
     },
     {
         "grupo": "T3",
-        "ruta":"no asignado",
-        "trainer":"no asignado",
+        "ruta": "no asignado",
+        "trainer": "no asignado",
         "campers": [
             {
                 "id": 24,
@@ -631,7 +630,6 @@
                     "modulo3": "no asignado"
                 }
             }
-           
         ]
     }
 ]
