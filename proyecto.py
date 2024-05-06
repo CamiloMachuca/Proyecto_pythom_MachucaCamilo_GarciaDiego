@@ -145,37 +145,56 @@ while buclePrincipal==True:
 
             if opc == "1": # Falta coregir esta opcion
                 campers = mostrarCampers()
-                grupo_canmper = input("ingresa el grupo en el que el camper se encuetra asignado: ")
-                camper_id = int(input("Ingrese el ID del camper: "))
-                for grupo in campers:
-                    if grupo["grupo"]==grupo_canmper:
-                        for camper in grupo["campers"]:
-                            if camper["id"]==camper_id:
-                                    modulo = input("Ingrese el nombre del módulo: ")
-                                    nota_teorica = float(input("Ingrese la nota teórica: "))
-                                    nota_practica = float(input("Ingrese la nota práctica: "))
-                                    nota_taller1 = float(input("ingresa la nota del taller 1: "))
-                                    nota_taller2 = float(input("ingresa la nota del taller 2: "))
-                                    camper["modulos"][modulo]={
-                                        "nota_teorica": nota_teorica,
-                                        "nota_practica": nota_practica,
-                                        "nota_taller1": nota_taller1,
-                                        "nota_taller2": nota_taller2
-                                    }
-                                    
-                                    promedio = (camper["nota_teorica"]*0.3)+(camper["nota_practica"]*0.6)+(camper["nota_taller1"]*0.05)+(camper["nota_taller2"]*0.05)
-                                    if promedio>= 60:
-                                        camper["estado"]="Aprobado"
-                                    else:
-                                        camper["estado"]="Reprobado"
+                campersInscritos = []  # Lista para almacenar campistas inscritos
 
-                                    guardarArchivoCampers(campers)
-                                    break
+                for grupo in campers:
+                    print("################")
+                    print(f"Grupo: {grupo['grupo']}")
+                    for camper in grupo["campers"]:
+                        if camper["estado"] == "Inscrito":  # Verifica si el campista está inscrito
+                            campersInscritos.append(camper)
+                            print("################")
+                            print("ID:", camper["id"])
+                            print("Nombre:", camper["nombres"])
+                            print("Apellido:", camper["apellidos"])
+                            print("Estado:", camper["estado"])
+
+                cantidadCampers = len(campersInscritos)
+                print("La cantidad de campers inscritos es:", cantidadCampers)
+                        
+                
+                grupo_camper = input("Ingrese el grupo en el que fue inscrito el camper: ")
+                camper_id = int(input("Ingrese el ID del camper: "))
+                
+                for grupo in campers:
+                    
+                    if grupo["grupo"] == grupo_camper:
+                        for camper in grupo["campers"]:
+                            if camper["id"] == camper_id:
+                                ingreso = "evaluar_inscrito"
+                                nota_teorica_ingreso = float(input("Ingrese la nota teórica: "))
+                                nota_practica_ingreso = float(input("Ingrese la nota práctica: "))
+                                
+                                promedio = nota_teorica_ingreso  + nota_practica_ingreso / 2
+
+                                camper[ingreso] = {
+                                    "nota_teorica" : nota_teorica_ingreso,
+                                    "nota_practica" : nota_practica_ingreso,
+                                    "nota_total" : promedio
+                                }
+                                
+                                if promedio >= 60:
+                                    camper["estado"] = "Aprobado"
+                                else:
+                                    camper["estado"] = "Reprobado"
+                                
+                                guardarArchivoCampers(campers)  # Aquí podrías guardar solo el grupo modificado si fuera necesario
+                                break
                         else:
-                            continue
+                            print("Camper no encontrado")
                         break
-                    else:
-                        print("camper no encontrado")
+                else:
+                    print("Grupo no encontrado")
                     
 
             elif opc=="2":#opcion para añadir un nuevo campers
@@ -201,8 +220,61 @@ while buclePrincipal==True:
 
 
             elif opc=="3":#opcion para asignar las notas a los campers
-                print("Ingrese el id del camper al cual le vas a asignar la nota: ")
-                
+                campers = mostrarCampers()
+                campersInscritos = []  # Lista para almacenar campistas inscritos
+
+                for grupo in campers:
+                    print("################")
+                    print(f"Grupo: {grupo['grupo']}")
+                    for camper in grupo["campers"]:
+                        if camper["estado"] == "Cursando":  # Verifica si el campista está inscrito
+                            campersInscritos.append(camper)
+                            print("################")
+                            print("ID:", camper["id"])
+                            print("Nombre:", camper["nombres"])
+                            print("Apellido:", camper["apellidos"])
+                            print("Estado:", camper["estado"])
+
+                cantidadCampers = len(campersInscritos)
+                print("La cantidad de campers cursando un modulo es:", cantidadCampers)
+
+                grupo_camper = input("Ingresa el grupo en el que el camper se encuentra asignado: ")
+                camper_id = int(input("Ingrese el ID del camper: "))
+                encontrado = False  # Bandera para verificar si el camper fue encontrado
+
+                for grupo in campers:
+                    if grupo["grupo"] == grupo_camper:
+                        for camper in grupo["campers"]:
+                            if camper["id"] == camper_id:
+                                nota_teorica_ingreso = float(input("Ingrese la nota teórica de ingreso: "))
+                                nota_practica_ingreso = float(input("Ingrese la nota práctica de ingreso: "))
+                                
+                                # Guardar las notas de ingreso en el camper
+                                camper["notas_ingreso"] = {
+                                    "nota_teorica": nota_teorica_ingreso,
+                                    "nota_practica": nota_practica_ingreso
+                                }
+                                
+                                # Calcular el promedio de las notas de ingreso
+                                promedio_ingreso = (nota_teorica_ingreso * 0.5) + (nota_practica_ingreso * 0.5)
+                                
+                                # Asignar estado de aprobado o reprobado
+                                if promedio_ingreso >= 60:
+                                    camper["estado"] = "Aprobado"
+                                else:
+                                    camper["estado"] = "Reprobado"
+                                
+                                encontrado = True  # Marcar que el camper fue encontrado
+                                guardarArchivoCampers(campers)
+                                print("Notas de ingreso asignadas correctamente.")
+                                break
+                        else:
+                            continue
+                        break
+
+                if not encontrado:
+                    print("Camper no encontrado en el grupo proporcionado.")
+                                
 
 
             elif opc=="4":#opcion para asignar las rutas de entrenamiento de los grupos
