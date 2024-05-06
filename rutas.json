@@ -1,53 +1,56 @@
 [
-    
     {
-        "id":1,
-        "ruta":"Java",
-        "Trainers":"no hay traines asignados",
-        "fechaInicio":"01-02-2024",
-        "fechaFin":"01-12-2024",
-        "modulos":[
-        {
-            "Fundamentos_de_ programación":"Psein,Python",
-            "Programación Web":"Html,Css,Bootstrap",
-            "Programación formal":"JavaScript, C#",
-            "Bases de datos":"Mysql, MongoDb",
-            "Backend":"NetCore, Spring Boot"
+        "ruta": {
+            "id": 1,
+            "nombre": "Java",
+            "Trainers": "no hay traines asignados",
+            "fechaInicio": "01-02-2024",
+            "fechaFin": "01-12-2024",
+            "modulos": [
+                {
+                    "Fundamentos_de_ programacion": "Psein,Python",
+                    "Programacion Web": "Html,Css,Bootstrap",
+                    "Programacion formal": "JavaScript, C#",
+                    "Bases de datos": "Mysql, MongoDb",
+                    "Backend": "NetCore, Spring Boot"
+                }
+            ]
         }
-    ]
     },
     {
-        "id":2,
-        "ruta":"NetCore",
-        "Trainers":"no hay traines asignados",
-        "fechaInicio":"01-02-2024",
-        "fechaFin":"01-12-2024",
-        "modulos":[   
-        {
-            "Fundamentos_de_ programación":"Psein,Python",
-            "Programación Web":"Html,Css,Bootstrap, Psein,Python",
-            "Programación formal":"Java, C#",
-            "Bases de datos":"Postgresql, MongoDb",
-            "Backend":"NetCore, Express"
+        "ruta": {
+            "id": 2,
+            "nombre": "NetCore",
+            "Trainers": "no hay traines asignados",
+            "fechaInicio": "01-02-2024",
+            "fechaFin": "01-12-2024",
+            "modulos": [
+                {
+                    "Fundamentos_de_ programacion": "Psein,Python",
+                    "Programacion Web": "Html,Css,Bootstrap, Psein,Python",
+                    "Programacion formal": "Java, C#",
+                    "Bases de datos": "Postgresql, MongoDb",
+                    "Backend": "NetCore, Express"
+                }
+            ]
         }
-    ]
     },
     {
-        "id":3,
-        "ruta":"NodeJS",
-        "Trainers":"no hay traines asignados",
-        "fechaInicio":"01-02-2024",
-        "fechaFin":"01-12-2024",
-        "modulos":[
-            {
-                "Fundamentos de programación":"Psein,Python",
-                "Programación Web":"Html,Css,Bootstrap",
-                "Programación formal":"Java, C#,JavaScript",
-                "Bases de datos":"Postgresql, MongoDb,Mysql",
-                "Backend":"NetCore, Express,Spring Boot, NodeJS"
-                
-            }
-    ]
-
+        "ruta": {
+            "id": 3,
+            "nombre": "NodeJS",
+            "Trainers": "no hay traines asignados",
+            "fechaInicio": "01-02-2024",
+            "fechaFin": "01-12-2024",
+            "modulos": [
+                {
+                    "Fundamentos de programacion": "Psein,Python",
+                    "Programacion Web": "Html,Css,Bootstrap",
+                    "Programacion formal": "Java, C#,JavaScript",
+                    "Bases de datos": "Postgresql, MongoDb,Mysql",
+                    "Backend": "NetCore, Express,Spring Boot, NodeJS"
+                }
+            ]
+        }
     }
 ]
