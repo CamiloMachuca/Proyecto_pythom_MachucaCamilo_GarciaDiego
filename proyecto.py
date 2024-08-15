@@ -19,7 +19,7 @@ def mostrarEntradas():
     return listaEntradas
 
 
-def guardarEntradas(miDato):# se crea una funcion para guardar los cambios que le realizemos al Json
+def guardarArchivoEntradas(miDato):# se crea una funcion para guardar los cambios que le realizemos al Json
     with open("entradas.json","w") as outfile:
         json.dump(miDato,outfile)
 
@@ -730,7 +730,7 @@ while buclePrincipal==True:
 
     
     elif op == "4" :
-        
+        print("prueba")
     
     
     
