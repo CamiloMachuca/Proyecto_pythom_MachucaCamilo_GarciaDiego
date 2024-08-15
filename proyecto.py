@@ -19,6 +19,9 @@ def mostrarEntradas():
     return listaEntradas
 
 
+def guardarArchivoEntradas(miDato):# se crea una funcion para guardar los cambios que le realizemos al Json
+    with open("entradas.json","w") as outfile:
+        json.dump(miDato,outfile)
 
 def guardarArchivoTrainers(miDato):# se crea una funcion para guardar los cambios que le realizemos al Json
     with open("trainers.json","w") as outfile:
