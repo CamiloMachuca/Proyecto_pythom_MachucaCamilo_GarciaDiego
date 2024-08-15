@@ -77,7 +77,7 @@ while buclePrincipal==True:
             print("================ Menu campers ==============")
             print("##########################################")
             print("(1) Mostrar mis datos como campers\n(2) volver al menu principal")
-            estadoSesion="Activa"
+            estadoSesionnn="Activa"
             opcion=input("Ingrese la opcion deseada: ")
                 
             if opcion=="1":
@@ -85,6 +85,7 @@ while buclePrincipal==True:
                 lisCampers=mostrarCampers()
                 
                 id=int(input("ingresa tu id para ver tu informacion: "))
+                idEntradas=id
                 for grupo in lisCampers:
                         for camper in grupo["campers"]:
                             if camper["id"]==id:
@@ -733,11 +734,13 @@ while buclePrincipal==True:
     elif op=="4":
         listaEntradas=[]
         print("Ingrese los datos para registrar su entrada: ")
-        id=input("Ingrese su id de camper: ")
-        fechaEntrada=str(date.today())
-        estadoSesion="inactiva"
-        listaEntradas=[id,fechaEntrada,estadoSesion]
+        añadirEntrada={}
+        añadirEntrada["fechaEntrada"]=str(date.today())
+        añadirEntrada["estadoSesion"]=estadoSesionnn
+        añadirEntrada["ActividadRealizada"]="ninguna"
+        listaEntradas.append(añadirEntrada)
         guardarEntradas(listaEntradas)
+
 
     
     
@@ -750,7 +753,7 @@ while buclePrincipal==True:
     
     
     
-    elif op=="4":# opcion para finalizar el bucle principal
+    elif op=="5":# opcion para finalizar el bucle principal
         print("Gracias por participar hasta luego...")
         buclePrincipal=False
     else:
