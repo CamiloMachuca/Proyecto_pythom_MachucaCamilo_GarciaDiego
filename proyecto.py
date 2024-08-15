@@ -729,6 +729,7 @@ while buclePrincipal==True:
                 print("===================================")
 
     
+    elif op == "4" :
     
     
     
@@ -740,8 +741,7 @@ while buclePrincipal==True:
     
     
     
-    
-    elif op=="4":# opcion para finalizar el bucle principal
+    elif op=="5":# opcion para finalizar el bucle principal
         print("Gracias por participar hasta luego...")
         buclePrincipal=False
     else:
