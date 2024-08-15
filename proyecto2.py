@@ -19,7 +19,9 @@ def mostrarEntradas():
         listaEntradas= json.load(openfile)
     return listaEntradas
 
-
+def guardarEntradas(miData):# se crea una funcion para guardar los cambios que le realizemos al Json
+    with open("entradas.json","w") as outfile:
+        json.dump(miData,outfile)
 
 def guardarArchivoTrainers(miDato):# se crea una funcion para guardar los cambios que le realizemos al Json
     with open("trainers.json","w") as outfile:
@@ -75,6 +77,7 @@ while buclePrincipal==True:
             print("================ Menu campers ==============")
             print("##########################################")
             print("(1) Mostrar mis datos como campers\n(2) volver al menu principal")
+            estadoSesion="Activa"
             opcion=input("Ingrese la opcion deseada: ")
                 
             if opcion=="1":
@@ -728,9 +731,13 @@ while buclePrincipal==True:
 
     
     elif op=="4":
+        listaEntradas=[]
         print("Ingrese los datos para registrar su entrada: ")
         id=input("Ingrese su id de camper: ")
         fechaEntrada=str(date.today())
+        estadoSesion="inactiva"
+        listaEntradas=[id,fechaEntrada,estadoSesion]
+        guardarEntradas(listaEntradas)
 
     
     
