@@ -12,10 +12,6 @@ def mostrarTrainers():# se crea una funcion para ver o extraer el contenido del 
 def guardarArchivoTrainers(miDato):# se crea una funcion para guardar los cambios que le realizemos al Json
     with open("trainers.json","w") as outfile:
         json.dump(miDato,outfile)
-            
-
-
-
 
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -31,14 +27,6 @@ def mostrarCampers():# se crea una funcion para ver o extraer el contenido del J
 def guardarArchivoCampers(miData):# se crea una funcion para guardar los cambios que le realizemos al Json
     with open("Campers.json","w") as outfile:
         json.dump(miData,outfile)
-
-
-
-
-
-
-
-
 
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -62,7 +50,8 @@ while buclePrincipal==True:
     print("(1) campers")
     print("(2)Trainers")
     print("(3)coordinador")
-    print("(4)finalizar programa")
+    print("(4)entradas de campers")
+    print("(5)finalizar programa")
     op=input("Ingresa la opcion deseada: ")
 
     if op=="1":
@@ -181,8 +170,6 @@ while buclePrincipal==True:
                             print("acudiente",i["acudiente"])
                             print("estado",i["estado"])
                         print("La cantidad de campers que aprobaron el examen inicial son: ",cantidadCampers)
-
-
 
 
                     elif respuesta=="3":#opcion para listar los trainers que trabajan en campusland 
