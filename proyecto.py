@@ -1,7 +1,8 @@
-
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import json
+
+from datetime import date
 
 def mostrarTrainers():# se crea una funcion para ver o extraer el contenido del Json
     listaTrainer=[]
@@ -18,10 +19,9 @@ def mostrarEntradas():
         listaEntradas= json.load(openfile)
     return listaEntradas
 
-
-def guardarArchivoEntradas(miDato):# se crea una funcion para guardar los cambios que le realizemos al Json
+def guardarEntradas(miData):# se crea una funcion para guardar los cambios que le realizemos al Json
     with open("entradas.json","w") as outfile:
-        json.dump(miDato,outfile)
+        json.dump(miData,outfile)
 
 def guardarArchivoTrainers(miDato):# se crea una funcion para guardar los cambios que le realizemos al Json
     with open("trainers.json","w") as outfile:
@@ -77,6 +77,7 @@ while buclePrincipal==True:
             print("================ Menu campers ==============")
             print("##########################################")
             print("(1) Mostrar mis datos como campers\n(2) volver al menu principal")
+            estadoSesionnn="Activa"
             opcion=input("Ingrese la opcion deseada: ")
                 
             if opcion=="1":
@@ -84,6 +85,7 @@ while buclePrincipal==True:
                 lisCampers=mostrarCampers()
                 
                 id=int(input("ingresa tu id para ver tu informacion: "))
+                idEntradas=id
                 for grupo in lisCampers:
                         for camper in grupo["campers"]:
                             if camper["id"]==id:
@@ -106,7 +108,7 @@ while buclePrincipal==True:
 
             lisTrainer=[]
             print("##########################################")
-            print("============= menu Trainers ==============")# Se creo el menu de trainers
+            print("============= menu Trainers ==============")
             print("##########################################")
             print("(1)verificar informacion del trainer\n(2)Reportes\n(3)volver al menu principal ")
             opcion=input("Ingrese la opcion deseada")
@@ -729,8 +731,18 @@ while buclePrincipal==True:
                 print("===================================")
 
     
-    elif op == "4" :
-        print("prueba")
+    elif op=="4":
+        listaEntradas=[]
+        print("Ingrese los datos para registrar su entrada: ")
+        añadirEntrada={}
+        añadirEntrada["fechaEntrada"]=str(date.today())
+        añadirEntrada["estadoSesion"]=estadoSesionnn
+        añadirEntrada["ActividadRealizada"]="ninguna"
+        listaEntradas.append(añadirEntrada)
+        guardarEntradas(listaEntradas)
+
+
+    
     
     
     
@@ -752,5 +764,3 @@ while buclePrincipal==True:
 
 
 #proyecro desarrollado por colaboradores Camilo Machuca, Diego Garcia - campers - Campuslands_Tibu 
-
-
