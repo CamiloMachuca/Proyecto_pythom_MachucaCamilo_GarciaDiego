@@ -106,7 +106,7 @@ while buclePrincipal==True:
 
             lisTrainer=[]
             print("##########################################")
-            print("============= menu Trainers ==============")
+            print("============= menu Trainers ==============")# Se creo el menu de trainers
             print("##########################################")
             print("(1)verificar informacion del trainer\n(2)Reportes\n(3)volver al menu principal ")
             opcion=input("Ingrese la opcion deseada")
@@ -730,7 +730,7 @@ while buclePrincipal==True:
 
     
     elif op == "4" :
-    
+        
     
     
     
