@@ -9,9 +9,22 @@ def mostrarTrainers():# se crea una funcion para ver o extraer el contenido del 
         listaTrainer= json.load(openfile)
 
     return listaTrainer
+
+
+
+def mostrarEntradas():
+    listaEntradas=[]
+    with open('entradas.json','r') as openfile:
+        listaEntradas= json.load(openfile)
+    return listaEntradas
+
+
+
 def guardarArchivoTrainers(miDato):# se crea una funcion para guardar los cambios que le realizemos al Json
     with open("trainers.json","w") as outfile:
         json.dump(miDato,outfile)
+
+
 
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
